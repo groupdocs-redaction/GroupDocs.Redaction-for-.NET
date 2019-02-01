@@ -24,4 +24,4 @@ Directory | Description
 + **Documentation:** [GroupDocs.Redaction for .NET Documentation](https://docs.groupdocs.com/display/redactionnet/Introducing+GroupDocs.Redaction+for+.NET)
 + **Free Support:** [GroupDocs.Redaction for .NET Free Support Forum](https://forum.groupdocs.com/c/redaction)
 + **Paid Support:** [GroupDocs.Redaction for .NET Paid Support Helpdesk](https://helpdesk.groupdocs.com/)
-+ **Blog:** [GroupDocs.Redaction for .NET Blog](https://blog.groupdocs.com/category/groupdocs-redaction-product-family/)
++ **Blog:** [GroupDocs.Redaction for .NET Blog](https://blog.groupdocs.com/category/redaction/)
