@@ -12,7 +12,7 @@ namespace GroupDocs.Redaction.Examples
         {
             #region Working with License
             //Apply License
-            //Common.SetLicense();
+            Common.SetLicense();
 
             //Apply Dynabic Metered License
             //Common.UseDynabicMeteredAccount();
@@ -32,7 +32,7 @@ namespace GroupDocs.Redaction.Examples
 
             #region Working with Text Redaction 
             //Perform a exact phrase redaction
-            //Redaction.Text.ExactPhraseRedaction();
+           // Redaction.Text.ExactPhraseRedaction();
             
             //Perform a case sensitive exact phrase redaction 
             //Redaction.Text.CaseSensitiveExactPhraseRedaction();
@@ -74,6 +74,16 @@ namespace GroupDocs.Redaction.Examples
             #region Working with Tabular Redaction
             //Work with tabular document redaction
             //Redaction.Tabular.TabularDocumentRedaction();
+            #endregion
+
+            #region Working with Configurable Redaction
+            //configure redactions in XML and apply them to any document as a single redaction profile.
+           // Redaction.Configurable.Redact_All();
+            #endregion
+
+            #region Working with Image Formats Redaction
+            //Perform image formats redactions.
+            Redaction.Image.ImageRedaction();
             #endregion
 
             #region Working with customizations

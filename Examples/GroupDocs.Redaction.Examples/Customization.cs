@@ -129,24 +129,25 @@ namespace GroupDocs.Redaction.Examples
             }
         }
 
-        public RedactionResult ReplaceText(Regex regex, Redactions.ReplacementOptions options)
+        public RedactionResult ReplaceText(Regex regularExpression, ReplacementOptions options)
         {
             try
             {
                 if (options.ActionType != Redactions.ReplacementType.ReplaceString)
                 {
-                    return new RedactionResult(false, "This format allows only ReplaceString redactions!");
+                    return  RedactionResult.Failed("This format allows only ReplaceString redactions!");
                 }
                 for (int i = 0; i < FileContent.Count; i++)
                 {
-                    FileContent[i] = regex.Replace(FileContent[i], options.Replacement);
+                    FileContent[i] = regularExpression.Replace(FileContent[i], options.Replacement);
                 }
-                return new RedactionResult(true, string.Empty);
+                return RedactionResult.Successful();
             }
             catch (Exception ex)
             {
-                return new RedactionResult(false, ex.ToString());
+                return RedactionResult.Failed(ex.ToString());
             }
         }
     }
-}
+ }
+

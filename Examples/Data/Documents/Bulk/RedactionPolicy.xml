@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<redactionPolicy xmlns="http://www.groupdocs.com/redaction">  
+  <regexRedaction regularExpression="(John)" actionType="ReplaceString" replacement="foobar" />  
+  <exactPhraseRedaction searchPhrase="foobar" caseSensitive="true" actionType="DrawBox" color="Red" />   
+   
+  <cellColumnRedaction regularExpression="^\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$" replacement="[red1]" columnIndex="1" worksheetIndex="2" /> 
+  <cellColumnRedaction searchPhrase="John" replacement="[red2]" wokrsheetName="Sheet1" /> 
+   
+  <eraseMetadataRedaction filter="All" />  
+  <metadataSearchRedaction filter="Title, Author" replacement="foobar" valueExpression="(metasearch)" keyExpression="" />  
+   
+  <annotationRedaction regularExpression="(Zara)" replacement="bar" />  
+  <deleteAnnotationRedaction regularExpression="(bar)" />  
+   
+  <imageAreaRedaction pointX="15" pointY="400" width="1200" height="10" color="#AA50FC"  />  
+  <imageAreaRedaction pointX="110" pointY="120" width="360" height="200" color="Magenta"  />  
+</redactionPolicy>
