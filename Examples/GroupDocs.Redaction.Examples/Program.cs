@@ -28,6 +28,9 @@ namespace GroupDocs.Redaction.Examples
             //Save Document
             //Common.SaveDocument();
 
+            //Save Document with PDF Conversion Control
+            //Common.SpecifyPDFComplianceAndPages();
+
             #endregion
 
             #region Working with Text Redaction 
@@ -83,7 +86,7 @@ namespace GroupDocs.Redaction.Examples
 
             #region Working with Image Formats Redaction
             //Perform image formats redactions.
-            Redaction.Image.ImageRedaction();
+            //Redaction.Image.ImageRedaction();
             #endregion
 
             #region Working with customizations

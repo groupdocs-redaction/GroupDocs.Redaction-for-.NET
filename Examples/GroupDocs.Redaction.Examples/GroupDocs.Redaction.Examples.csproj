@@ -32,8 +32,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GroupDocs.Redaction, Version=19.3.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\GroupDocs.Redaction.19.3.0\lib\net2.0\GroupDocs.Redaction.dll</HintPath>
+    <Reference Include="GroupDocs.Redaction, Version=19.5.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\GroupDocs.Redaction.19.5.1\lib\net2.0\GroupDocs.Redaction.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />

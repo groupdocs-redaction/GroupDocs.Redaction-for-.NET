@@ -12,6 +12,7 @@ namespace GroupDocs.Redaction.Examples
         {
             //Sample file path
             private const string FilePath = "Documents/Doc/sample.docx";
+            
             //Protected sample file path
             private const string ProtectedFilePath = "Documents/Doc/protected_sample.docx";
             /// <summary>
@@ -72,6 +73,7 @@ namespace GroupDocs.Redaction.Examples
                     doc.Save();
                 }
             }
+            
 
         }
 
@@ -201,7 +203,7 @@ namespace GroupDocs.Redaction.Examples
                 //ExStart:ImageAreaRedaction_19.3
                 using (Document doc = Redactor.Load(Common.MapSourceFilePath(FilePath)))
                 {
-                    //Define the the position on image
+                    //Define the position on image
                     System.Drawing.Point samplePoint = new System.Drawing.Point(516, 311);
 
                     //Define the size of the area which need to be redacted

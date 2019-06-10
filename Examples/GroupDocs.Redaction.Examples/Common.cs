@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GroupDocs.Redaction.Redactions;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -21,7 +22,9 @@ namespace GroupDocs.Redaction.Examples
         private const string PrivateKey = "Private key for your account";
         //License file path
         private const string LicenseFilePath = @"D:\GroupDocs.Total.NET.lic";
-       
+        //Sample file path for PDF conversion control
+        private const string Conversion_Control_FilePath = "Documents/Doc/demo.docx";
+
         /// <summary>
         /// Applies License
         /// </summary>
@@ -42,6 +45,21 @@ namespace GroupDocs.Redaction.Examples
             Metered metered = new Metered();
             // set-up credentials
             metered.SetMeteredKey(PublicKey, PrivateKey);
+
+            // do some work:
+
+            // Load Word document
+            using (Document doc = Redactor.Load(Common.MapSourceFilePath(Conversion_Control_FilePath)))
+            {
+                // Do some redaction
+                RedactionSummary result = doc.RedactWith(new ExactPhraseRedaction("John Doe", new ReplacementOptions(System.Drawing.Color.Red)));
+
+                // and get consumption quantity
+                decimal consumptionQuantitiy = GroupDocs.Redaction.Metered.GetConsumptionQuantity();
+
+                // get consumption credit (Supported since version 19.5)
+                decimal consumptionCredit = GroupDocs.Redaction.Metered.GetConsumptionCredit();
+            }
         }
         /// <summary>
         /// Maps source file path
@@ -120,6 +138,29 @@ namespace GroupDocs.Redaction.Examples
                 }
             }
 
+        }
+
+        /// <summary>
+        /// Opens and performs redaction in password proteced document
+        /// </summary>
+        public static void SpecifyPDFComplianceAndPages()
+        {
+            using (Document doc = Redactor.Load(Common.MapSourceFilePath(Conversion_Control_FilePath)))
+            {
+                RedactionSummary result = doc.RedactWith(new ExactPhraseRedaction("John Doe", new ReplacementOptions(System.Drawing.Color.Red)));
+                if (result.Status != RedactionStatus.Failed)
+                {
+
+                    var options = new SaveOptions();
+                    options.Rasterization.Enabled = true;                           // the same as options.RasterizeToPDF = true;
+                    options.Rasterization.PageIndex = 5;                            // start from 5th page
+                    options.Rasterization.PageCount = 1;                            // save only one page
+                    options.Rasterization.Compliance = PdfComplianceLevel.PdfA1a;   // by default PdfComplianceLevel.Auto or PDF/A-1b
+                    options.AddSuffix = true;
+                    doc.Save(options);
+
+                }
+            }
         }
     }
 }
