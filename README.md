@@ -11,6 +11,11 @@ GroupDocs.Redaction for .NET is an API for removing sensitive and classified inf
   </a>
 </p>
 
+Directory | Description
+--------- | -----------
+[Examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-.NET/tree/master/Examples)  | Contains the package of all .NET examples (C#) and sample files that will help you learn how to use API features. 
+[Plugins](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-.NET/tree/master/Plugins/GroupDocsRedactionVSPlugin) | Contains Visual Studio Add-in to explore GroupDocs.Redaction for .NET examples.
+
 ## How to Run the Examples
 
 + You can either clone the repository using your favorite GitHub client or download the ZIP file from the above button.
@@ -25,10 +30,6 @@ GroupDocs.Redaction for .NET is an API for removing sensitive and classified inf
 
 Please find more details for how to run the examples [here](https://docs.groupdocs.com/display/redactionnet/How+to+Run+Examples).
 
-Directory | Description
---------- | -----------
-[Examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-.NET/tree/master/Examples)  | Contains the package of all .NET examples (C#) and sample files that will help you learn how to use API features. 
-[Plugins](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-.NET/tree/master/Plugins/GroupDocsRedactionVSPlugin) | Contains Visual Studio Add-in to explore GroupDocs.Redaction for .NET examples.
 ## Resources
 
 + **Website:** [www.groupdocs.com](http://www.groupdocs.com)
