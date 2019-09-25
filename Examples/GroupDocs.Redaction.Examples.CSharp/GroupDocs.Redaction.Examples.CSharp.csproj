@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{19390288-4210-4696-A7DE-7996AB8B0527}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>GroupDocs.Redaction.Examples.CSharp</RootNamespace>
+    <AssemblyName>GroupDocs.Redaction.Examples.CSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GroupDocs.Redaction, Version=19.9.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\GroupDocs.Redaction.19.9\lib\net2.0\GroupDocs.Redaction.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdvancedUsage\ExtendSupportedExtensionsList.cs" />
+    <Compile Include="AdvancedUsage\CreateCustomFormatHandler.cs" />
+    <Compile Include="AdvancedUsage\SavingDocuments\SaveToStream.cs" />
+    <Compile Include="AdvancedUsage\SavingDocuments\SaveWithDefaultOptions.cs" />
+    <Compile Include="AdvancedUsage\LoadingDocuments\LoadFromLocalDisc.cs" />
+    <Compile Include="AdvancedUsage\LoadingDocuments\LoadFromStream.cs" />
+    <Compile Include="HelperClasses\PlainTextDocument.cs" />
+    <Compile Include="HelperClasses\RedactionDump.cs" />
+    <Compile Include="AdvancedUsage\UseRedactionCallback.cs" />
+    <Compile Include="AdvancedUsage\UseRedactionPolicy.cs" />
+    <Compile Include="BasicUsage\AnnotationRedactions\RedactAnnotations.cs" />
+    <Compile Include="BasicUsage\AnnotationRedactions\RemoveAllAnnotations.cs" />
+    <Compile Include="BasicUsage\AnnotationRedactions\RemoveAnnotations.cs" />
+    <Compile Include="BasicUsage\GetFileInfoForAFileFromLocalDisk.cs" />
+    <Compile Include="BasicUsage\GetFileInfoForAFileFromStream.cs" />
+    <Compile Include="BasicUsage\GetSupportedFileFormats.cs" />
+    <Compile Include="BasicUsage\ImageRedactions\RedactImageArea.cs" />
+    <Compile Include="AdvancedUsage\LoadingDocuments\LoadPasswordProtectedFile.cs" />
+    <Compile Include="AdvancedUsage\SavingDocuments\SaveInOriginalFormat.cs" />
+    <Compile Include="AdvancedUsage\SavingDocuments\SaveInRasterizedPDF.cs" />
+    <Compile Include="AdvancedUsage\SavingDocuments\SaveOverwritingOriginalFile.cs" />
+    <Compile Include="AdvancedUsage\SavingDocuments\SelectSpecificPagesForRasterizedPDF.cs" />
+    <Compile Include="BasicUsage\MetadataRedactions\CleanMetadata.cs" />
+    <Compile Include="BasicUsage\MetadataRedactions\CleanMetadataWithFilter.cs" />
+    <Compile Include="BasicUsage\MetadataRedactions\RedactMetadata.cs" />
+    <Compile Include="BasicUsage\MetadataRedactions\RedactMetadataWithFilter.cs" />
+    <Compile Include="BasicUsage\RedactionBasics\ApplyMultipleRedactions.cs" />
+    <Compile Include="BasicUsage\RedactionBasics\ApplyRedaction.cs" />
+    <Compile Include="BasicUsage\SpreadsheetRedactions\FilterBySpreadsheetAndColumn.cs" />
+    <Compile Include="BasicUsage\TextRedactions\UseColoredRectangle.cs" />
+    <Compile Include="BasicUsage\TextRedactions\UseExactPhraseRedaction.cs" />
+    <Compile Include="BasicUsage\TextRedactions\UseExactPhraseCaseSensitive.cs" />
+    <Compile Include="BasicUsage\TextRedactions\UseRegularExpression.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="QuickStart\HelloWorld.cs" />
+    <Compile Include="QuickStart\SetLicenseFromFile.cs" />
+    <Compile Include="QuickStart\SetLicenseFromStream.cs" />
+    <Compile Include="QuickStart\SetMeteredLicense.cs" />
+    <Compile Include="RunExamples.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
