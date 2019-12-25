@@ -5,6 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage
 {
+    using GroupDocs.Redaction.Options;
     using GroupDocs.Redaction.Redactions;
 
     using GroupDocs.Redaction.Examples.CSharp.HelperClasses;
@@ -16,10 +17,9 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage
     {
         public static void Run()
         {
-            using (Redactor redactor = new Redactor(Constants.SAMPLE_DOCX))
+            using (Redactor redactor = new Redactor(Constants.SAMPLE_DOCX, new LoadOptions(), new RedactorSettings(new RedactionDump())))
             {
                 // Assign an instance before using Redactor
-                Redactor.RedactionCallback = new RedactionDump();
                 redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions("[personal]")));
                 redactor.Save();
             }

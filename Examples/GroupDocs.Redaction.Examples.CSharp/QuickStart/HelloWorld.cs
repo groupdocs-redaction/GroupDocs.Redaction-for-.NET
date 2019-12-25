@@ -33,7 +33,7 @@ namespace GroupDocs.Redaction.Examples.CSharp.QuickStart
                 }
             }
 
-            Console.WriteLine("\nSource document was redacted successfully.\nFile saved at " + outputFilePath);
+            Console.WriteLine("\nSource document was redacted successfully.\nFile saved at " + Path.GetFullPath(outputFilePath));
         }
     }
 }

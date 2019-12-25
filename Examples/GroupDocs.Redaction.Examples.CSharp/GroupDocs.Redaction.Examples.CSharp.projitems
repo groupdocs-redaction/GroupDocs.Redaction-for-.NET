@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>E37F6428-B9E3-4005-A40F-6909FD0E7CE6</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>GroupDocs.Redaction.Examples.CSharp</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\ExtendSupportedExtensionsList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\CreateCustomFormatHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\SavingDocuments\SaveToStream.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\SavingDocuments\SaveWithDefaultOptions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\LoadingDocuments\LoadFromLocalDisc.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\LoadingDocuments\LoadFromStream.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\LoadingDocuments\UseAdvancedLogging.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)HelperClasses\PlainTextDocument.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)HelperClasses\RedactionDump.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)HelperClasses\CustomLogger.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\UseRedactionCallback.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\UseRedactionPolicy.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\AnnotationRedactions\RedactAnnotations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\AnnotationRedactions\RemoveAllAnnotations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\AnnotationRedactions\RemoveAnnotations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\GetFileInfoForAFileFromLocalDisk.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\GetFileInfoForAFileFromStream.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\GetSupportedFileFormats.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ImageRedactions\RedactImageArea.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\LoadingDocuments\LoadPasswordProtectedFile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\SavingDocuments\SaveInOriginalFormat.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\SavingDocuments\SaveInRasterizedPDF.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\SavingDocuments\SaveOverwritingOriginalFile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\SavingDocuments\SelectSpecificPagesForRasterizedPDF.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\MetadataRedactions\CleanMetadata.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\MetadataRedactions\CleanMetadataWithFilter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\MetadataRedactions\RedactMetadata.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\MetadataRedactions\RedactMetadataWithFilter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\RedactionBasics\ApplyMultipleRedactions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\RedactionBasics\ApplyRedaction.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\SpreadsheetRedactions\FilterBySpreadsheetAndColumn.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\TextRedactions\UseColoredRectangle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\TextRedactions\UseExactPhraseRedaction.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\TextRedactions\UseExactPhraseCaseSensitive.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\TextRedactions\UseRegularExpression.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Constants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QuickStart\HelloWorld.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QuickStart\SetLicenseFromFile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QuickStart\SetLicenseFromStream.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QuickStart\SetMeteredLicense.cs" />
+  </ItemGroup>
+</Project>

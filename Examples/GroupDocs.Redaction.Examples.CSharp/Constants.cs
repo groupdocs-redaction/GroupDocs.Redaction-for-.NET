@@ -24,9 +24,9 @@ namespace GroupDocs.Redaction.Examples.CSharp
         /// </summary>
         public const string PrivateKey = "Private key for your Metered account";
 
-        public const string SamplesPath = "../../../Resources/SampleFiles";
-        public const string ImagesPath = "../../../Resources/SampleFiles/Images";
-        public const string CertificatesPath = "../../../Resources/SampleFiles/Certificates";
+        public const string SamplesPath = "../../../../GroupDocs.Redaction.Examples.CSharp/Resources/SampleFiles";
+        public const string ImagesPath = "../../../../GroupDocs.Redaction.Examples.CSharp/Resources/SampleFiles/Images";
+        public const string CertificatesPath = "../../../../GroupDocs.Redaction.Examples.CSharp/Resources/SampleFiles/Certificates";
         public const string OutputPath = "../../Output/";        
 
         private static string GetSampleFilePath(string filePath) 

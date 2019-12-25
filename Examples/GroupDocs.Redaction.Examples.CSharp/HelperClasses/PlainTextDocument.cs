@@ -11,12 +11,14 @@ namespace GroupDocs.Redaction.Examples.CSharp.HelperClasses
     using GroupDocs.Redaction.Configuration;
     using GroupDocs.Redaction.Integration;
     using GroupDocs.Redaction.Redactions;
+    using GroupDocs.Redaction.Options;
 
     /// <summary>
     /// This is an example of DocumentFormatInstance-derived format handler class for plain text documents
     /// </summary>
     public class PlainTextDocument : DocumentFormatInstance, ITextualFormatInstance
     {
+        private RedactorSettings Settings { get; set; }
         private List<string> FileContent { get; set; }
 
         public PlainTextDocument()
@@ -24,8 +26,9 @@ namespace GroupDocs.Redaction.Examples.CSharp.HelperClasses
             FileContent = new List<string>();
         }
 
-        public override void Initialize(DocumentFormatConfiguration config)
+        public override void Initialize(DocumentFormatConfiguration config, RedactorSettings settings)
         {
+            Settings = settings;
         }
 
         public override void Load(System.IO.Stream input)

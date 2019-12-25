@@ -94,6 +94,9 @@ namespace GroupDocs.Redaction.Examples.CSharp
 
             //Redact a Password-Protected Document
             //AdvancedUsage.LoadingDocuments.OpenPasswordProtectedFile.Run();
+
+            //Use custom ILogger implementation 
+            //AdvancedUsage.LoadingDocuments.UseAdvancedLogging.Run();
             #endregion
 
             #region Saving Documents
