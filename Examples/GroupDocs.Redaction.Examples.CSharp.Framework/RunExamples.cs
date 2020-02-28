@@ -79,6 +79,9 @@ namespace GroupDocs.Redaction.Examples.CSharp
             #region Image Redactions
             //Perform image formats redactions.
             //BasicUsage.ImageRedactions.RedactImageArea.Run();
+
+            //Remove Image metadata.
+            //BasicUsage.ImageRedactions.CleanImageMetadada.Run();
             #endregion
 
             #endregion // Basic Usage
