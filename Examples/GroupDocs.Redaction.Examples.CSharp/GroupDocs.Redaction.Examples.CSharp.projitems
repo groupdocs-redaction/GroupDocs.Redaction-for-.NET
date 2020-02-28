@@ -16,6 +16,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\LoadingDocuments\LoadFromLocalDisc.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\LoadingDocuments\LoadFromStream.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\LoadingDocuments\UseAdvancedLogging.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ImageRedactions\CleanImageMetadada.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)HelperClasses\PlainTextDocument.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)HelperClasses\RedactionDump.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)HelperClasses\CustomLogger.cs" />
