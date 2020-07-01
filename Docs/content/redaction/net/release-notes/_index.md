@@ -8,4 +8,3 @@ keywords:
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
-### Release Notes
