@@ -2,7 +2,7 @@
 id: use-advanced-logging
 url: redaction/net/use-advanced-logging
 title: Use Advanced Logging
-weight: 5
+weight: 4
 description: ""
 keywords: 
 productName: GroupDocs.Redaction for .NET

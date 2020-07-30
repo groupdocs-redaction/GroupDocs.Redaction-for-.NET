@@ -82,6 +82,9 @@ namespace GroupDocs.Redaction.Examples.CSharp
 
             //Remove Image metadata.
             //BasicUsage.ImageRedactions.CleanImageMetadada.Run();
+
+            //Redact embedded images.
+            //BasicUsage.ImageRedactions.RedactEmbeddedImages.Run();
             #endregion
 
             #endregion // Basic Usage
@@ -128,11 +131,14 @@ namespace GroupDocs.Redaction.Examples.CSharp
             //Work with redaction callback 
             //AdvancedUsage.UseRedactionCallback.Run();
 
-            //Create a custom file foramt 
+            //Create a custom file format 
             //AdvancedUsage.CreateCustomFormatHandler.Run();
 
             //configure redactions in XML and apply them to any document as a single redaction profile.
             //AdvancedUsage.UseRedactionPolicy.Run();
+
+            //Create a PDF document with page image redactions 
+            //AdvancedUsage.CreatePDFWithImageRedaction.Run();
             #endregion
 
             Console.WriteLine("Operation completed...");

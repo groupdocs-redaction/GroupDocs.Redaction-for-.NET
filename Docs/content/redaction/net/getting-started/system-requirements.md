@@ -33,6 +33,10 @@ GroupDocs.Redaction for .NET supports any 32-bit or 64-bit operating system whe
 *   Microsoft Windows 8, 8.1 ( x64, x86)
 *   Microsoft Windows 10 ( x64, x86)
 
+### UNIX
+
+*   Linux or any platform, supporting .NET Core 3.1
+
 ## Supported Frameworks
 
 GroupDocs.Redaction for .NET  supports Microsoft .NET Framework and .NET Standard 2.0. All implementations of .NET platform, conforming to .NET Standard 2.0, are also supported.

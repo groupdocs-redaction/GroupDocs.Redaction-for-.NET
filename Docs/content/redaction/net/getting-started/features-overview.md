@@ -58,3 +58,11 @@ Annotation redactions allow you to remove specific or any annotations (comments,
 ## Image Redactions
 
 Although GroupDocs.Redaction software does not support OCR, so you cannot extract a text from an image, search it for data and redact sensitive data within the image. You can put a colored box over a given area, such as header, footer, or an area, where customer's data are expected to appear. Also you can use it to edit exif data or use it as an exif eraser.
+
+Also, you can use Image Redactions to redact all kinds of embedded images within a document:
+
+*   Redact each page of a PDF file, created from paper page scans;
+
+*   Create a rasterized PDF file, and edit its pages as images;
+
+*   Redact all images within a PDF, Microsoft Office or Open Office document.
