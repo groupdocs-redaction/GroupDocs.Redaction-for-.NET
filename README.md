@@ -78,4 +78,4 @@ using (Redactor redactor = new Redactor(@"C:\test.pdf"))
 }
 ```
 
-[Product Page](https://products.groupdocs.com/redaction/net) | [Documentation](https://docs.groupdocs.com/redaction/net) | [Demo](https://products.groupdocs.app/redaction/family) | [API Reference](https://apireference.groupdocs.com/net/redaction) | [Examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-.NET) | [Blog](https://blog.groupdocs.com/category/redaction/) | [Free Support](https://forum.groupdocs.com/c/redaction) | [Temporary License](https://purchase.groupdocs.com/temporary-license)
+[Home](https://www.groupdocs.com/) | [Product Page](https://products.groupdocs.com/redaction/net) | [Documentation](https://docs.groupdocs.com/redaction/net) | [Demo](https://products.groupdocs.app/redaction/family) | [API Reference](https://apireference.groupdocs.com/redaction/net) | [Examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-.NET) | [Blog](https://blog.groupdocs.com/category/redaction/) | [Free Support](https://forum.groupdocs.com/c/redaction) | [Temporary License](https://purchase.groupdocs.com/temporary-license)
