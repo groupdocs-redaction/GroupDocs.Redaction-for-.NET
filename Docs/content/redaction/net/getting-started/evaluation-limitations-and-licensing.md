@@ -79,7 +79,7 @@ metered.SetMeteredKey(publicKey, privateKey);
 // Apply redaction to a document
 using (Redactor redactor = new Redactor("D:\\test.docx"))
 {
-   RedactorChangeLog result = redactor.Apply(new RegexRedaction(LookupStrings.SSNRegexPattern, new ReplacementOptions("[ssn]")));
+   RedactorChangeLog result = redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions(System.Drawing.Color.Red)));
    if (result.Status != RedactionStatus.Failed)
    {
       redactor.Save();

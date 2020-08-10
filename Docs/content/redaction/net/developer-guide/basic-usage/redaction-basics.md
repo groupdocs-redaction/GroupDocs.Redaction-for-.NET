@@ -32,7 +32,7 @@ Applying redaction to a document is done through [Redactor.Apply](https://apiref
 ```csharp
 using (Redactor redactor = new Redactor("sample.docx"))
 {
-   RedactorChangeLog result = redactor.Apply(new RegexRedaction(LookupStrings.SSNRegexPattern, new ReplacementOptions("[ssn]")));
+   RedactorChangeLog result = redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions("[personal]")));
    if (result.Status != RedactionStatus.Failed)
    {
       redactor.Save();
@@ -82,14 +82,11 @@ using (Redactor redactor = new Redactor("sample.docx"))
 {
    var redactionList = new Redaction[] 
    {
-      new ExactPhraseRedaction(LookupStrings.ClientName, new ReplacementOptions("[client]")),
-      new ExactPhraseRedaction(LookupStrings.ClientAddress, new ReplacementOptions(System.Drawing.Color.Red)),
-      new RegexRedaction(LookupStrings.SSNRegexPattern, new ReplacementOptions("[ssn]")),
-      new RegexRedaction(LookupStrings.BankCardRegexPattern, new ReplacementOptions(System.Drawing.Color.Blue)),
-      // ... other redactions
-      new DeleteAnnotationRedaction("(?im:(use|show|describe))"),
-      new EraseMetadataRedaction(MetadataFilter.Author),
-      new MetadataSearchRedaction(LookupStrings.CompanyName, "--company--") 
+      new ExactPhraseRedaction("John Doe", new ReplacementOptions("[Client]")),
+      new RegexRedaction("Redaction", new ReplacementOptions("[Product]")),
+      new RegexRedaction("\\d{2}\\s*\\d{2}[^\\d]*\\d{6}", new ReplacementOptions(System.Drawing.Color.Blue)),
+      new DeleteAnnotationRedaction(),
+      new EraseMetadataRedaction(MetadataFilters.All)
    }; 
    RedactorChangeLog result = redactor.Apply(redactionList);
    // false, if at least one redaction failed
@@ -115,7 +112,7 @@ You may easily run the code above and see the feature in action in our GitHub e
 *   [GroupDocs.Redaction for Java examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Java)
     
 
-### Free online document parser App
+### Free online document redaction App
 
 Along with full featured .NET library we provide simple, but powerful free Apps.
 

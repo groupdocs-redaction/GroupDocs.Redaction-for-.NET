@@ -117,7 +117,7 @@ You may easily run the code above and see the feature in action in our GitHub e
 *   [GroupDocs.Redaction for Java examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-Java)
     
 
-### Free online document parser App
+### Free online document redaction App
 
 Along with full featured .NET library we provide simple, but powerful free Apps.
 
