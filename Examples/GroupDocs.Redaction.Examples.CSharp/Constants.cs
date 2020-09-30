@@ -54,12 +54,13 @@ namespace GroupDocs.Redaction.Examples.CSharp
         public static string SAMPLE_EXIF_JPG = GetSampleFilePath("Image/exif.jpg");
 
         // Text files
-        public static string SAMPLE_TXT = GetSampleFilePath("Doc/sample.txt");
+        public static string SAMPLE_DUMP = GetSampleFilePath("Doc/sample.dump");
 
         // Policy test files
         public static string POLICY_FILE = GetSampleFilePath("Bulk/RedactionPolicy.xml");
         public static string POLICY_INBOUND = GetSampleFilePath("Bulk/Inbound");
         public static string POLICY_OUTBOUND_DONE = GetSampleFilePath("Bulk/Outbound/Done");
         public static string POLICY_OUTBOUND_FAILED = GetSampleFilePath("Bulk/Outbound/Failed");
+        public static string POLICY_SAVE = GetSampleFilePath("SamplePolicy.xml");
     }
 }

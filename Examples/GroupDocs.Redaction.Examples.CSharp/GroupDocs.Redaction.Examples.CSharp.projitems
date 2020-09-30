@@ -11,6 +11,7 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\ExtendSupportedExtensionsList.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\CreateCustomFormatHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\CreateRedactionPolicy.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\SavingDocuments\SaveToStream.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\SavingDocuments\SaveWithDefaultOptions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\LoadingDocuments\LoadFromLocalDisc.cs" />
@@ -19,7 +20,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\CreatePDFWithImageRedaction.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ImageRedactions\CleanImageMetadada.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ImageRedactions\RedactEmbeddedImages.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)HelperClasses\PlainTextDocument.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)HelperClasses\CustomTextualDocument.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)HelperClasses\RedactionDump.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)HelperClasses\CustomLogger.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\UseRedactionCallback.cs" />

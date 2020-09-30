@@ -20,14 +20,14 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage
         {
             var config = new DocumentFormatConfiguration()
             {
-                ExtensionFilter = ".txt",
-                DocumentType = typeof(PlainTextDocument)
+                ExtensionFilter = ".dump",
+                DocumentType = typeof(CustomTextualDocument)
             };
             RedactorConfiguration.GetInstance().AvailableFormats.Add(config);
-            using (Redactor redactor = new Redactor(Constants.SAMPLE_TXT))
+            using (Redactor redactor = new Redactor(Constants.SAMPLE_DUMP))
             {
                 // Here we can use document instance to perform redactions
-                redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions("[personal]")));
+                redactor.Apply(new ExactPhraseRedaction("dolor", false, new ReplacementOptions("[redacted]")));
                 // Save the document to "*_AnyText.*" (e.g. timestamp instead of "AnyText") in its file name without rasterization
                 redactor.Save(new SaveOptions(false, "AnyText"));
             }

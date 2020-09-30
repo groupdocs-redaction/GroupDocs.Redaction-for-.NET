@@ -8,15 +8,15 @@ keywords:
 productName: GroupDocs.Redaction for .NET
 hideChildren: False
 ---
-This method can be used when for some reason files have non-standard extensions or if its format is supported, but not pre-configured. For instance, all kinds of plain text files (logs, dumps etc) could be opened with text processors like MS Word/Open Office. In this case you do not need to create your own format handler. As it is shown below, you can add file extension (e.g. ".log") as being handled by the same *[DocumentFormatInstance](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction.integration/documentformatinstance)* as MS Word files:
+This method can be used when for some reason files have non-standard extensions or if its format is supported, but not pre-configured. For instance, all kinds of plain text files (batch, command files, etc.) could be opened. In this case you do not need to create your own format handler. As it is shown below, you can add file extension (e.g. ".dump") as being handled by the same *[DocumentFormatInstance](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction.integration/documentformatinstance)* as all plain text files:
 
 **C#**
 
 ```csharp
 var config = RedactorConfiguration.GetInstance();
-var docxSettings = config.FindFormat(".docx");
-docxSettings.ExtensionFilter = docxSettings.ExtensionFilter + ",.log";
-using (Redactor redactor = new Redactor(@"C:\sample.log"))
+var settings = config.FindFormat(".txt");
+settings.ExtensionFilter = settings.ExtensionFilter + ",.dump";
+using (Redactor redactor = new Redactor(@"C:\sample.dump"))
 {
    // Here we can use document instance to perform redactions
 }

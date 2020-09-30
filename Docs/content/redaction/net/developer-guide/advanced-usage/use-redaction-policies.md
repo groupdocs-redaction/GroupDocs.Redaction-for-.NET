@@ -33,6 +33,21 @@ Below is an example of redaction policy XML file (code properties mapping is obv
   <imageAreaRedaction pointX="110" pointY="120" width="60" height="20" color="Magenta"  />  
 </redactionPolicy> 
 ```
+You can use RedactionPolicy.Save() method to create XML documents of this structure, configuring redactions in runtime.
+
+The following example demonstrates how to save a [RedactionPolicy](https://apireference.groupdocs.com/redaction/net/groupdocs.redaction/redactionpolicy) to an XML file.
+ 
+**C#**
+
+```csharp
+RedactionPolicy policy = new RedactionPolicy(new Redaction[] {
+    new ExactPhraseRedaction("Redaction", new ReplacementOptions("[Product]")),
+    new RegexRedaction("\\d{2}\\s*\\d{2}[^\\d]*\\d{6}", new ReplacementOptions(System.Drawing.Color.Blue)),
+    new DeleteAnnotationRedaction(),
+    new EraseMetadataRedaction(MetadataFilters.All)
+});
+policy.Save(".\\MyPolicyFile.xml");
+```
 
 You can have as much policies, as you need, loading them to redact your documents.
 

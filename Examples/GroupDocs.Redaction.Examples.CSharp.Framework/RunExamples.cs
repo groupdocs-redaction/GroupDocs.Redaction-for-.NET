@@ -134,7 +134,10 @@ namespace GroupDocs.Redaction.Examples.CSharp
             //Create a custom file format 
             //AdvancedUsage.CreateCustomFormatHandler.Run();
 
-            //configure redactions in XML and apply them to any document as a single redaction profile.
+            //Save a set of redactions as an XML policy.
+            //AdvancedUsage.CreateRedactionPolicy.Run();
+
+            //Configure redactions in XML and apply them to any document as a single redaction profile.
             //AdvancedUsage.UseRedactionPolicy.Run();
 
             //Create a PDF document with page image redactions 

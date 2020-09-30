@@ -16,12 +16,12 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage
         public static void Run()
         {
             RedactorConfiguration config = RedactorConfiguration.GetInstance();
-            DocumentFormatConfiguration docxSettings = config.FindFormat(".docx");
-            docxSettings.ExtensionFilter = docxSettings.ExtensionFilter + ",.txt";
-            using (Redactor redactor = new Redactor(Constants.SAMPLE_TXT))
+            DocumentFormatConfiguration settings = config.FindFormat(".txt");
+            settings.ExtensionFilter = settings.ExtensionFilter + ",.dump";
+            using (Redactor redactor = new Redactor(Constants.SAMPLE_DUMP))
             {
                 // Here we can use document instance to perform redactions
-                redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions("[personal]")));
+                redactor.Apply(new ExactPhraseRedaction("dolor", false, new ReplacementOptions("[redacted]")));
                 redactor.Save();
             }
         }

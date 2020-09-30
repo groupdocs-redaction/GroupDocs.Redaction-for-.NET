@@ -20,17 +20,17 @@ If format is not supported, you will need to implement a handler for it by inher
 
 Each of these interfaces is optional, i.e. you don't have to implement all of them, e.g. [IImageFormatInstance](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction.integration/iimageformatinstance) - if you don't need its functionality or [IMetadataAccess](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction.integration/imetadataaccess), if your format does not support metadata.
 
-Below, we create a [DocumentFormatInstance](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction.integration/documentformatinstance) class for plain text document, supporting only textual redactions:
+Below, we create a [DocumentFormatInstance](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction.integration/documentformatinstance) class with custom logic for textual documents processing, supporting only textual redactions:
 
 **C#**
 
 ```csharp
-public class PlainTextDocument : DocumentFormatInstance, ITextualFormatInstance
+public class CustomTextualDocument : DocumentFormatInstance, ITextualFormatInstance
 {
     private RedactorSettings Settings { get; set; }
     private List<string> FileContent { get; set; }
 
-    public PlainTextDocument()
+    public CustomTextualDocument()
     {
         FileContent = new List<string>();
     }
@@ -45,30 +45,21 @@ public class PlainTextDocument : DocumentFormatInstance, ITextualFormatInstance
         FileContent.Clear();
         using (var reader = new StreamReader(input))
         {
-            string line = string.Empty;
-            do
+            while (!reader.EndOfStream)
             {
-                line = reader.ReadLine();
-                if (!string.IsNullOrEmpty(line))
-                {
-                    FileContent.Add(line);
-                }
+                FileContent.Add(reader.ReadLine());
             }
-            while (!string.IsNullOrEmpty(line));
-            reader.Close();
         }
     }
 
-	public override void Save(System.IO.Stream output)
+    public override void Save(System.IO.Stream output)
     {
-        using (var writer = new StreamWriter(output)) 
+        var writer = new StreamWriter(output);
+        foreach (var line in FileContent)
         {
-            foreach (var line in FileContent)
-            {
-                writer.WriteLine(line);
-            }
-            writer.Close();
+            writer.WriteLine(line);
         }
+        writer.Flush();
     }
 
     public RedactionResult ReplaceText(Regex regex, Redactions.ReplacementOptions options)
@@ -94,7 +85,7 @@ public class PlainTextDocument : DocumentFormatInstance, ITextualFormatInstance
 
 ```
 
-In order to use this class, we will need to add it to pre-configured formats, e.g. as a handler for logs ("\*.log"):
+In order to use this class, we will need to add it to pre-configured formats, e.g. as a handler for dump files ("\*.dump"):
 
 **C#**
 
@@ -102,8 +93,8 @@ In order to use this class, we will need to add it to pre-configured formats, e.
 var config = RedactorConfiguration.GetInstance();
 config.AvailableFormats.Add(new DocumentFormatConfiguration()
 {
-    ExtensionFilter = ".log",
-    DocumentType = typeof(PlainTextDocument)
+    ExtensionFilter = ".dump",
+    DocumentType = typeof(CustomTextualDocument)
 });
 ```
 
