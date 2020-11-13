@@ -9,7 +9,7 @@
   <Import Project="..\GroupDocs.Redaction.Examples.CSharp\GroupDocs.Redaction.Examples.CSharp.projitems" Label="Shared" />
 
   <ItemGroup>
-    <PackageReference Include="GroupDocs.Redaction" Version="20.9.0" />
+    <PackageReference Include="GroupDocs.Redaction" Version="20.11.0" />
   </ItemGroup>
 
 </Project>

@@ -2,7 +2,7 @@
 id: annotation-redactions
 url: redaction/net/annotation-redactions
 title: Annotation redactions
-weight: 6
+weight: 7
 description: ""
 keywords: 
 productName: GroupDocs.Redaction for .NET

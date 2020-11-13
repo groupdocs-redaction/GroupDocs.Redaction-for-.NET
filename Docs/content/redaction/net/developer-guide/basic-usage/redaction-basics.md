@@ -2,7 +2,7 @@
 id: redaction-basics
 url: redaction/net/redaction-basics
 title: Redaction basics
-weight: 3
+weight: 4
 description: ""
 keywords: 
 productName: GroupDocs.Redaction for .NET

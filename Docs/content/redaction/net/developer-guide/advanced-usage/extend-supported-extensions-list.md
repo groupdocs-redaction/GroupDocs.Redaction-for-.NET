@@ -18,7 +18,7 @@ var settings = config.FindFormat(".txt");
 settings.ExtensionFilter = settings.ExtensionFilter + ",.dump";
 using (Redactor redactor = new Redactor(@"C:\sample.dump"))
 {
-   // Here we can use document instance to perform redactions
+   // Here we can use the document instance to perform redactions
 }
 ```
 

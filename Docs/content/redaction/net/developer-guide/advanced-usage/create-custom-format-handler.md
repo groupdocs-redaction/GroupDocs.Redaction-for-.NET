@@ -17,6 +17,7 @@ If format is not supported, you will need to implement a handler for it by inher
 | [IAnnotatedDocument](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction.integration/iannotateddocument) | Required for annotation redactions, changes or deletes annotations, matching given regular expression |
 | [IRasterizableDocument](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction.integration/irasterizabledocument) | Required to rasterize (save document as a PDF with page images) |
 | [IImageFormatInstance](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction.integration/iimageformatinstance) | Required for raster image format redactions, based on area top-left corner coordinates and area size |
+| [IPreviewable](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction.integration/ipreviewable) | Required to provide document general information and preview functionality |
 
 Each of these interfaces is optional, i.e. you don't have to implement all of them, e.g. [IImageFormatInstance](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction.integration/iimageformatinstance) - if you don't need its functionality or [IMetadataAccess](https://apireference.groupdocs.com/net/redaction/groupdocs.redaction.integration/imetadataaccess), if your format does not support metadata.
 

@@ -87,6 +87,18 @@ namespace GroupDocs.Redaction.Examples.CSharp
             //BasicUsage.ImageRedactions.RedactEmbeddedImages.Run();
             #endregion
 
+            // Get supported file formats.
+            //BasicUsage.GetSupportedFileFormats.Run();
+
+            // Get document info from local disc.
+            //BasicUsage.GetFileInfoForAFileFromLocalDisk.Run();
+
+            // Get document info from stream.
+            //BasicUsage.GetFileInfoForAFileFromStream.Run();
+
+            // Get document page preview.
+            //BasicUsage.GetDocumentPagePreview.Run();
+
             #endregion // Basic Usage
 
             #region Advanced Usage

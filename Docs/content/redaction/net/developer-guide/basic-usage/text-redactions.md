@@ -2,7 +2,7 @@
 id: text-redactions
 url: redaction/net/text-redactions
 title: Text redactions
-weight: 4
+weight: 5
 description: ""
 keywords: 
 productName: GroupDocs.Redaction for .NET

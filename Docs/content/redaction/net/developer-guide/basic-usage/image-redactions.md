@@ -2,7 +2,7 @@
 id: image-redactions
 url: redaction/net/image-redactions
 title: Image redactions
-weight: 8
+weight: 9
 description: ""
 keywords: 
 productName: GroupDocs.Redaction for .NET

@@ -2,7 +2,7 @@
 id: spreadsheet-redactions
 url: redaction/net/spreadsheet-redactions
 title: Spreadsheet redactions
-weight: 7
+weight: 8
 description: ""
 keywords: 
 productName: GroupDocs.Redaction for .NET
