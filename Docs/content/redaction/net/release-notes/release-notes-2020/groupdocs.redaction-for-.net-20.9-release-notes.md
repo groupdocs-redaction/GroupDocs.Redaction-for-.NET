@@ -2,7 +2,7 @@
 id: groupdocs-redaction-for-net-20-9-release-notes
 url: redaction/net/groupdocs-redaction-for-net-20-9-release-notes
 title: GroupDocs.Redaction for .NET 20.9 Release Notes
-weight: 1
+weight: 4
 description: ""
 keywords: 
 productName: GroupDocs.Redaction for .NET
