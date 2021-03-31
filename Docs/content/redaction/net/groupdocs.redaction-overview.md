@@ -16,7 +16,7 @@ GroupDocs.Redaction provides a single format-independent interface to clear EXIF
 
 Our document redaction software is simple, intuitive and complete. With only a few lines of code you can redact text, comments and metadata without installing any additional software and at the same time configure redaction options to fulfill your needs.
 
-Black out text in PDF, Word, Excel ,PowerPoint and image files and many more with GroupDocs.Redaction for .NET. 
+Black out text in PDF, Word, Excel, PowerPoint and image files and many more with GroupDocs.Redaction for .NET. 
 
 ## Why Use GroupDocs.Redaction?
 
