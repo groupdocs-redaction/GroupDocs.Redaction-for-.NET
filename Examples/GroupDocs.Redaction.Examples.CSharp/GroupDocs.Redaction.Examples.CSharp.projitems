@@ -18,9 +18,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\LoadingDocuments\LoadFromStream.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\LoadingDocuments\UseAdvancedLogging.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\CreatePDFWithImageRedaction.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\UsingOCR\UseAsposeOCRForCloud.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\UsingOCR\UseMicrosoftAzureComputerVision.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\GetDocumentPagePreview.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ImageRedactions\CleanImageMetadada.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ImageRedactions\RedactEmbeddedImages.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)HelperClasses\AsposeOCRForCloudConnector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)HelperClasses\ComputerVisionOcrConnector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)HelperClasses\CustomTextualDocument.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)HelperClasses\RedactionDump.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)HelperClasses\CustomLogger.cs" />

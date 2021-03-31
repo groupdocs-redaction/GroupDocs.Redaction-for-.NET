@@ -137,6 +137,14 @@ namespace GroupDocs.Redaction.Examples.CSharp
             //AdvancedUsage.SavingDocuments.SelectSpecificPagesForRasterizedPDF.Run();
             #endregion // Loading and Saving
 
+            #region Using OCR
+            // Use Aspose.OCR for Cloud SDK
+            //AdvancedUsage.UsingOCR.UseAsposeOCRForCloud.Run();
+            
+            // Use Microsoft Azure Cognitive Services Computer Vision
+            //AdvancedUsage.UsingOCR.UseMicrosoftAzureComputerVision.Run();
+            #endregion // Using OCR
+
             //Adding custom file extensions
             //AdvancedUsage.ExtendSupportedExtensionsList.Run();
 
