@@ -9,6 +9,7 @@
   <Import Project="..\GroupDocs.Redaction.Examples.CSharp\GroupDocs.Redaction.Examples.CSharp.projitems" Label="Shared" />
 
   <ItemGroup>
+    <PackageReference Include="Aspose.OCR" Version="21.7.0" />
     <PackageReference Include="Aspose.OCR-Cloud" Version="21.3.1" />
     <PackageReference Include="GroupDocs.Redaction" Version="21.3.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />

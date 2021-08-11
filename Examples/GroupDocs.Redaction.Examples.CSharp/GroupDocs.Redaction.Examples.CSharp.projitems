@@ -19,10 +19,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\LoadingDocuments\UseAdvancedLogging.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\CreatePDFWithImageRedaction.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\UsingOCR\UseAsposeOCRForCloud.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\UsingOCR\UseAsposeOCROnPremise.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\UsingOCR\UseMicrosoftAzureComputerVision.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\GetDocumentPagePreview.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ImageRedactions\CleanImageMetadada.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ImageRedactions\RedactEmbeddedImages.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)HelperClasses\AsposeOCRStandaloneConnector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)HelperClasses\AsposeOCRForCloudConnector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)HelperClasses\ComputerVisionOcrConnector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)HelperClasses\CustomTextualDocument.cs" />
@@ -54,6 +56,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\TextRedactions\UseExactPhraseCaseSensitive.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\TextRedactions\UseRegularExpression.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Constants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)HelperClasses\RegularTextLine.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)QuickStart\HelloWorld.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)QuickStart\SetLicenseFromFile.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)QuickStart\SetLicenseFromStream.cs" />

@@ -138,6 +138,9 @@ namespace GroupDocs.Redaction.Examples.CSharp
             #endregion // Loading and Saving
 
             #region Using OCR
+            // Use Aspose.OCR for .NET API
+            //AdvancedUsage.UsingOCR.UseAsposeOCROnPremise.Run();
+
             // Use Aspose.OCR for Cloud SDK
             //AdvancedUsage.UsingOCR.UseAsposeOCRForCloud.Run();
 
