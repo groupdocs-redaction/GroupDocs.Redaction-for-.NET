@@ -55,6 +55,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\TextRedactions\UseExactPhraseRedaction.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\TextRedactions\UseExactPhraseCaseSensitive.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\TextRedactions\UseRegularExpression.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\RemovePageRedactions\RemovePageRange.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\RemovePageRedactions\RemoveLastPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Constants.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)HelperClasses\RegularTextLine.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)QuickStart\HelloWorld.cs" />

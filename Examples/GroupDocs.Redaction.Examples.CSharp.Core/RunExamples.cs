@@ -87,6 +87,15 @@ namespace GroupDocs.Redaction.Examples.CSharp
             //BasicUsage.ImageRedactions.RedactEmbeddedImages.Run();
             #endregion
 
+            #region Remove Page Redactions
+            //Remove a range of pages.
+            //BasicUsage.RemovePageRedactions.RemovePageRange.Run();
+
+            //Remove the last page.
+            //BasicUsage.RemovePageRedactions.RemoveLastPage.Run();
+
+            #endregion
+
             // Get supported file formats.
             //BasicUsage.GetSupportedFileFormats.Run();
 
