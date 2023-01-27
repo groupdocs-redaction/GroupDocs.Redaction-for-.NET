@@ -44,6 +44,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\SavingDocuments\SaveInRasterizedPDF.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\SavingDocuments\SaveOverwritingOriginalFile.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\SavingDocuments\SelectSpecificPagesForRasterizedPDF.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\SavingDocuments\UseAdvancedRasterizationOptions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\SavingDocuments\UseBorderRasterizationOption.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\SavingDocuments\UseGrayscaleRasterizationOption.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\SavingDocuments\UseNoiseRasterizationOption.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\SavingDocuments\UseTiltRasterizationOption.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\MetadataRedactions\CleanMetadata.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\MetadataRedactions\CleanMetadataWithFilter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\MetadataRedactions\RedactMetadata.cs" />
@@ -57,6 +62,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\TextRedactions\UseRegularExpression.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\RemovePageRedactions\RemovePageRange.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\RemovePageRedactions\RemoveLastPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\RemovePageRedactions\RemoveFrameFromImage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Constants.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)HelperClasses\RegularTextLine.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)QuickStart\HelloWorld.cs" />

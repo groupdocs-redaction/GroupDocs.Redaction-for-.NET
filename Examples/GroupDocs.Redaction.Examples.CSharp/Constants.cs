@@ -54,6 +54,7 @@ namespace GroupDocs.Redaction.Examples.CSharp
         // Images
         public static string SAMPLE_JPG = GetSampleFilePath("Image/sample.jpg");
         public static string SAMPLE_EXIF_JPG = GetSampleFilePath("Image/exif.jpg");
+        public static string ANIMATED_GIF = GetSampleFilePath("Image/sample.gif");
 
         // Text files
         public static string SAMPLE_DUMP = GetSampleFilePath("Doc/sample.dump");

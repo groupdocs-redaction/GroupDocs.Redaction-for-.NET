@@ -94,6 +94,9 @@ namespace GroupDocs.Redaction.Examples.CSharp
             //Remove the last page.
             //BasicUsage.RemovePageRedactions.RemoveLastPage.Run();
 
+            //Remove frame from image.
+            //BasicUsage.RemovePageRedactions.RemoveFrameFromImage.Run();
+
             #endregion
 
             // Get supported file formats.
@@ -144,6 +147,22 @@ namespace GroupDocs.Redaction.Examples.CSharp
 
             //Save only specific pages of thge Document as PDF 
             //AdvancedUsage.SavingDocuments.SelectSpecificPagesForRasterizedPDF.Run();
+
+            // Use advanced rasterization options
+            //AdvancedUsage.SavingDocuments.UseAdvancedRasterizationOptions.Run();
+
+            // Use border rasterization option
+            //AdvancedUsage.SavingDocuments.UseBorderRasterizationOption.Run();
+
+            // Use grayscale rasterization option
+            //AdvancedUsage.SavingDocuments.UseGrayscaleRasterizationOption.Run();
+
+            // Use noise rasterizationo ption
+            //AdvancedUsage.SavingDocuments.UseNoiseRasterizationOption.Run();
+
+            // Use tilt rasterization option
+            //AdvancedUsage.SavingDocuments.UseTiltRasterizationOption.Run();
+
             #endregion // Loading and Saving
 
             #region Using OCR
