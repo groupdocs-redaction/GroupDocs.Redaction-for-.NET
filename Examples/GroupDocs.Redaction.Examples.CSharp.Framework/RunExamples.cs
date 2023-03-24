@@ -19,7 +19,7 @@ namespace GroupDocs.Redaction.Examples.CSharp
             QuickStart.SetLicenseFromFile.Run();
             //QuickStart.SetLicenseFromStream.Run();
             //QuickStart.SetMeteredLicense.Run();
-            QuickStart.HelloWorld.Run();
+            //QuickStart.HelloWorld.Run();
             #endregion // Quick Start
 
             #region Basic Usage
@@ -84,7 +84,7 @@ namespace GroupDocs.Redaction.Examples.CSharp
             //BasicUsage.ImageRedactions.CleanImageMetadada.Run();
 
             //Redact embedded images.
-            //BasicUsage.ImageRedactions.RedactEmbeddedImages.Run();
+            BasicUsage.ImageRedactions.RedactEmbeddedImages.Run();
             #endregion
 
             #region Remove Page Redactions
@@ -127,6 +127,9 @@ namespace GroupDocs.Redaction.Examples.CSharp
 
             //Use custom ILogger implementation 
             //AdvancedUsage.LoadingDocuments.UseAdvancedLogging.Run();
+
+            //Pre-rasterize document 
+            //AdvancedUsage.LoadingDocuments.PreRasterize.Run();
             #endregion
 
             #region Saving Documents

@@ -12,6 +12,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\ExtendSupportedExtensionsList.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\CreateCustomFormatHandler.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\CreateRedactionPolicy.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\LoadingDocuments\PreRasterize.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\SavingDocuments\SaveToStream.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\SavingDocuments\SaveWithDefaultOptions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\LoadingDocuments\LoadFromLocalDisc.cs" />

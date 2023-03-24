@@ -127,6 +127,9 @@ namespace GroupDocs.Redaction.Examples.CSharp
 
             //Use custom ILogger implementation 
             //AdvancedUsage.LoadingDocuments.UseAdvancedLogging.Run();
+
+            //Pre-rasterize document 
+            //AdvancedUsage.LoadingDocuments.PreRasterize.Run();
             #endregion
 
             #region Saving Documents
