@@ -9,11 +9,12 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>GroupDocs.Redaction.Examples.CSharp</RootNamespace>
     <AssemblyName>GroupDocs.Redaction.Examples.CSharp</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -41,8 +42,8 @@
     <Reference Include="Aspose.Ocr.Cloud.Sdk, Version=21.3.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Aspose.OCR-Cloud.21.3.1\lib\net45\Aspose.Ocr.Cloud.Sdk.dll</HintPath>
     </Reference>
-    <Reference Include="GroupDocs.Redaction, Version=23.1.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\GroupDocs.Redaction.23.1.0\lib\net45\GroupDocs.Redaction.dll</HintPath>
+    <Reference Include="GroupDocs.Redaction, Version=23.6.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\GroupDocs.Redaction.23.6.0\lib\net45\GroupDocs.Redaction.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ML.OnnxRuntime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=f27f157f0a5b7bb6, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ML.OnnxRuntime.Managed.1.7.0\lib\netstandard1.1\Microsoft.ML.OnnxRuntime.dll</HintPath>

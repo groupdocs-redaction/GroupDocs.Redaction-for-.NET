@@ -179,6 +179,11 @@ namespace GroupDocs.Redaction.Examples.CSharp
             //AdvancedUsage.UsingOCR.UseMicrosoftAzureComputerVision.Run();
             #endregion // Using OCR
 
+            #region Using redaction filters
+            // Use PDF redaction filters
+            //AdvancedUsage.UsingRedactionFilters.UsePdfRedactionFilters.Run();
+            #endregion // Using redaction filters
+
             //Adding custom file extensions
             //AdvancedUsage.ExtendSupportedExtensionsList.Run();
 
