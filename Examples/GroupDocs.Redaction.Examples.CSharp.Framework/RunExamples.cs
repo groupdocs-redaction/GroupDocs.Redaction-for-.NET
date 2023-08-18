@@ -19,7 +19,7 @@ namespace GroupDocs.Redaction.Examples.CSharp
             QuickStart.SetLicenseFromFile.Run();
             //QuickStart.SetLicenseFromStream.Run();
             //QuickStart.SetMeteredLicense.Run();
-            //QuickStart.HelloWorld.Run();
+            QuickStart.HelloWorld.Run();
             #endregion // Quick Start
 
             #region Basic Usage
@@ -42,8 +42,14 @@ namespace GroupDocs.Redaction.Examples.CSharp
             //Replace text with colored rectangle 
             //BasicUsage.TextRedactions.UseColoredRectangle.Run();
 
+            //Replace arabic (or any right-to-left) text  
+            //BasicUsage.TextRedactions.UseExactPhraseRightToLeft.Run();
+
             //Peform a regular expression redaction
             //BasicUsage.TextRedactions.UseRegularExpression.Run();
+
+            //Redact whole paragraph from a document
+            //BasicUsage.TextRedactions.UseRegexForParagraph.Run();
             #endregion
 
             #region Metadata Redactions
@@ -182,6 +188,9 @@ namespace GroupDocs.Redaction.Examples.CSharp
             #region Using redaction filters
             // Use PDF redaction filters
             //AdvancedUsage.UsingRedactionFilters.UsePdfRedactionFilters.Run();
+
+            // Use PageAreaRedaction
+            //AdvancedUsage.UsingRedactionFilters.UsePageAreaRedaction.Run();
             #endregion // Using redaction filters
 
             //Adding custom file extensions

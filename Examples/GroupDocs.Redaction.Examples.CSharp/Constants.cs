@@ -44,6 +44,8 @@ namespace GroupDocs.Redaction.Examples.CSharp
         // PDF
         public static string SAMPLE_PDF_4OCR = GetSampleFilePath("Pdf/OCR sample.pdf");
         public static string MULTIPAGE_PDF = GetSampleFilePath("Pdf/Multipage.pdf");
+        public static string LOREMIPSUM_PDF = GetSampleFilePath("Pdf/LoremIpsum.pdf");
+        public static string ARABIC_PDF = GetSampleFilePath("Pdf/Arabic.pdf");
 
         // Presentations
 
