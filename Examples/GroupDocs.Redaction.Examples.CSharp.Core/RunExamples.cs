@@ -1,8 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GroupDocs.Redaction.Examples.CSharp
 {
@@ -26,96 +22,96 @@ namespace GroupDocs.Redaction.Examples.CSharp
 
             #region Redaction Basics
             // Apply single redaction
-            //BasicUsage.RedactionBasics.ApplyRedaction.Run();
+            BasicUsage.RedactionBasics.ApplyRedaction.Run();
 
             // Apply multiple redactions and analyse redaction result
-            //BasicUsage.RedactionBasics.ApplyMultipleRedactions.Run();
+            BasicUsage.RedactionBasics.ApplyMultipleRedactions.Run();
             #endregion
 
             #region Text Redactions 
             //Perform an exact phrase redaction
-            //BasicUsage.TextRedactions.UseExactPhraseRedaction.Run();
+            BasicUsage.TextRedactions.UseExactPhraseRedaction.Run();
 
             //Perform a case sensitive exact phrase redaction 
-            //BasicUsage.TextRedactions.UseExactPhraseCaseSensitive.Run();
+            BasicUsage.TextRedactions.UseExactPhraseCaseSensitive.Run();
 
             //Replace text with colored rectangle 
-            //BasicUsage.TextRedactions.UseColoredRectangle.Run();
+            BasicUsage.TextRedactions.UseColoredRectangle.Run();
 
             //Replace arabic (or any right-to-left) text  
-            //BasicUsage.TextRedactions.UseExactPhraseRightToLeft.Run();
+            BasicUsage.TextRedactions.UseExactPhraseRightToLeft.Run();
 
             //Peform a regular expression redaction
-            //BasicUsage.TextRedactions.UseRegularExpression.Run();
+            BasicUsage.TextRedactions.UseRegularExpression.Run();
 
             //Redact whole paragraph from a document
-            //BasicUsage.TextRedactions.UseRegexForParagraph.Run();
+            BasicUsage.TextRedactions.UseRegexForParagraph.Run();
             #endregion
 
             #region Metadata Redactions
             //Clean document metadata
-            //BasicUsage.MetadataRedactions.CleanMetadata.Run();
+            BasicUsage.MetadataRedactions.CleanMetadata.Run();
 
             //Clean document metadata matching filter 
-            //BasicUsage.MetadataRedactions.CleanMetadataWithFilter.Run();
+            BasicUsage.MetadataRedactions.CleanMetadataWithFilter.Run();
 
             //Search and replace metadata 
-            //BasicUsage.MetadataRedactions.RedactMetadata.Run();
+            BasicUsage.MetadataRedactions.RedactMetadata.Run();
 
             //Search and replace metadata using filters
-            //BasicUsage.MetadataRedactions.RedactMetadataWithFilter.Run();
+            BasicUsage.MetadataRedactions.RedactMetadataWithFilter.Run();
             #endregion
 
             #region Annotation Redactions
             //Remove Specific Annotations 
-            //BasicUsage.AnnotationRedactions.RemoveAllAnnotations.Run();
+            BasicUsage.AnnotationRedactions.RemoveAllAnnotations.Run();
 
             //Remove Specific Annotations 
-            //BasicUsage.AnnotationRedactions.RemoveAnnotations.Run();
+            BasicUsage.AnnotationRedactions.RemoveAnnotations.Run();
 
             //Remove sensitive information from annotations 
-            //BasicUsage.AnnotationRedactions.RedactAnnotations.Run();
+            BasicUsage.AnnotationRedactions.RedactAnnotations.Run();
             #endregion
 
             #region Spreadsheet Redaction
             //Work with spreadsheet document redaction
-            //BasicUsage.SpreadsheetRedactions.FilterBySpreadsheetAndColumn.Run();
+            BasicUsage.SpreadsheetRedactions.FilterBySpreadsheetAndColumn.Run();
             #endregion
 
             #region Image Redactions
             //Perform image formats redactions.
-            //BasicUsage.ImageRedactions.RedactImageArea.Run();
+            BasicUsage.ImageRedactions.RedactImageArea.Run();
 
             //Remove Image metadata.
-            //BasicUsage.ImageRedactions.CleanImageMetadada.Run();
+            BasicUsage.ImageRedactions.CleanImageMetadada.Run();
 
             //Redact embedded images.
-            //BasicUsage.ImageRedactions.RedactEmbeddedImages.Run();
+            BasicUsage.ImageRedactions.RedactEmbeddedImages.Run();
             #endregion
 
             #region Remove Page Redactions
             //Remove a range of pages.
-            //BasicUsage.RemovePageRedactions.RemovePageRange.Run();
+            BasicUsage.RemovePageRedactions.RemovePageRange.Run();
 
             //Remove the last page.
-            //BasicUsage.RemovePageRedactions.RemoveLastPage.Run();
+            BasicUsage.RemovePageRedactions.RemoveLastPage.Run();
 
             //Remove frame from image.
-            //BasicUsage.RemovePageRedactions.RemoveFrameFromImage.Run();
+            BasicUsage.RemovePageRedactions.RemoveFrameFromImage.Run();
 
             #endregion
 
             // Get supported file formats.
-            //BasicUsage.GetSupportedFileFormats.Run();
+            BasicUsage.GetSupportedFileFormats.Run();
 
             // Get document info from local disc.
-            //BasicUsage.GetFileInfoForAFileFromLocalDisk.Run();
+            BasicUsage.GetFileInfoForAFileFromLocalDisk.Run();
 
             // Get document info from stream.
-            //BasicUsage.GetFileInfoForAFileFromStream.Run();
+            BasicUsage.GetFileInfoForAFileFromStream.Run();
 
             // Get document page preview.
-            //BasicUsage.GetDocumentPagePreview.Run();
+            BasicUsage.GetDocumentPagePreview.Run();
 
             #endregion // Basic Usage
 
@@ -123,60 +119,60 @@ namespace GroupDocs.Redaction.Examples.CSharp
 
             #region Loading Documents
             // Open file from local disc
-            //AdvancedUsage.LoadingDocuments.LoadFromLocalDisc.Run();
+            AdvancedUsage.LoadingDocuments.LoadFromLocalDisc.Run();
 
             // Open file from stream
             //AdvancedUsage.LoadingDocuments.LoadFromStream.Run();
 
             //Redact a Password-Protected Document
-            //AdvancedUsage.LoadingDocuments.OpenPasswordProtectedFile.Run();
+            AdvancedUsage.LoadingDocuments.OpenPasswordProtectedFile.Run();
 
             //Use custom ILogger implementation 
             //AdvancedUsage.LoadingDocuments.UseAdvancedLogging.Run();
 
             //Pre-rasterize document 
-            //AdvancedUsage.LoadingDocuments.PreRasterize.Run();
+            AdvancedUsage.LoadingDocuments.PreRasterize.Run();
             #endregion
 
             #region Saving Documents
             //Save the Redacted Document In Its Original Format With Timestamp
-            //AdvancedUsage.SavingDocuments.SaveInOriginalFormat.Run();
+            AdvancedUsage.SavingDocuments.SaveInOriginalFormat.Run();
 
             //Save the Document as PDF 
-            //AdvancedUsage.SavingDocuments.SaveInRasterizedPDF.Run();
+            AdvancedUsage.SavingDocuments.SaveInRasterizedPDF.Run();
 
             //Redact and save the document overwriting its original
-            //AdvancedUsage.SavingDocuments.SaveOverwritingOriginalFile.Run();
+            AdvancedUsage.SavingDocuments.SaveOverwritingOriginalFile.Run();
 
             //Save the document to a custom location using stream
             //AdvancedUsage.SavingDocuments.SaveToStream.Run();
 
             // Save with default options
-            //AdvancedUsage.SavingDocuments.SaveWithDefaultOptions.Run();
+            AdvancedUsage.SavingDocuments.SaveWithDefaultOptions.Run();
 
-            //Save only specific pages of thge Document as PDF 
-            //AdvancedUsage.SavingDocuments.SelectSpecificPagesForRasterizedPDF.Run();
+            //Save only specific pages of the Document as PDF 
+            AdvancedUsage.SavingDocuments.SelectSpecificPagesForRasterizedPDF.Run();
 
             // Use advanced rasterization options
-            //AdvancedUsage.SavingDocuments.UseAdvancedRasterizationOptions.Run();
+            AdvancedUsage.SavingDocuments.UseAdvancedRasterizationOptions.Run();
 
             // Use border rasterization option
-            //AdvancedUsage.SavingDocuments.UseBorderRasterizationOption.Run();
+            AdvancedUsage.SavingDocuments.UseBorderRasterizationOption.Run();
 
             // Use grayscale rasterization option
-            //AdvancedUsage.SavingDocuments.UseGrayscaleRasterizationOption.Run();
+            AdvancedUsage.SavingDocuments.UseGrayscaleRasterizationOption.Run();
 
             // Use noise rasterizationo ption
-            //AdvancedUsage.SavingDocuments.UseNoiseRasterizationOption.Run();
+            AdvancedUsage.SavingDocuments.UseNoiseRasterizationOption.Run();
 
             // Use tilt rasterization option
-            //AdvancedUsage.SavingDocuments.UseTiltRasterizationOption.Run();
+            AdvancedUsage.SavingDocuments.UseTiltRasterizationOption.Run();
 
             #endregion // Loading and Saving
 
             #region Using OCR
             // Use Aspose.OCR for .NET API
-            //AdvancedUsage.UsingOCR.UseAsposeOCROnPremise.Run();
+            AdvancedUsage.UsingOCR.UseAsposeOCROnPremise.Run();
 
             // Use Aspose.OCR for Cloud SDK
             //AdvancedUsage.UsingOCR.UseAsposeOCRForCloud.Run();
@@ -187,29 +183,35 @@ namespace GroupDocs.Redaction.Examples.CSharp
 
             #region Using redaction filters
             // Use PDF redaction filters
-            //AdvancedUsage.UsingRedactionFilters.UsePdfRedactionFilters.Run();
+            AdvancedUsage.UsingRedactionFilters.UsePdfRedactionFilters.Run();
 
             // Use PageAreaRedaction
-            //AdvancedUsage.UsingRedactionFilters.UsePageAreaRedaction.Run();
+            AdvancedUsage.UsingRedactionFilters.UsePageAreaRedaction.Run();
             #endregion // Using redaction filters
 
             //Adding custom file extensions
-            //AdvancedUsage.ExtendSupportedExtensionsList.Run();
+            AdvancedUsage.ExtendSupportedExtensionsList.Run();
 
             //Work with redaction callback 
-            //AdvancedUsage.UseRedactionCallback.Run();
+            AdvancedUsage.UseRedactionCallback.Run();
 
             //Create a custom file format 
-            //AdvancedUsage.CreateCustomFormatHandler.Run();
+            AdvancedUsage.CreateCustomFormatHandler.Run();
 
             //Save a set of redactions as an XML policy.
-            //AdvancedUsage.CreateRedactionPolicy.Run();
+            AdvancedUsage.CreateRedactionPolicy.Run();
 
             //Configure redactions in XML and apply them to any document as a single redaction profile.
             //AdvancedUsage.UseRedactionPolicy.Run();
 
             //Create a PDF document with page image redactions 
-            //AdvancedUsage.CreatePDFWithImageRedaction.Run();
+            AdvancedUsage.CreatePDFWithImageRedaction.Run();
+
+            //Custom redactions using
+            AdvancedUsage.CustomRedaction.Run();
+
+            //Custom redactions AI integration
+            AdvancedUsage.CustomRedactionAI.Run();
             #endregion
 
             Console.WriteLine("Operation completed...");

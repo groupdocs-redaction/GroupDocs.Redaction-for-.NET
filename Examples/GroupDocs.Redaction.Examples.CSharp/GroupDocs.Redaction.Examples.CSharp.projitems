@@ -9,6 +9,8 @@
     <Import_RootNamespace>GroupDocs.Redaction.Examples.CSharp</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\CustomRedaction\CustomRedactionAI.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\CustomRedaction\CustomRedaction.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\ExtendSupportedExtensionsList.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\CreateCustomFormatHandler.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\CreateRedactionPolicy.cs" />
