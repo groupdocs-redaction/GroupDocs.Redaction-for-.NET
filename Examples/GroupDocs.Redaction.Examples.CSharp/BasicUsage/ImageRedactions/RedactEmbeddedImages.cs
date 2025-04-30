@@ -1,6 +1,4 @@
 ﻿using System;
-using System.IO;
-using System.Text.RegularExpressions;
 
 namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.ImageRedactions
 {
@@ -13,8 +11,13 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.ImageRedactions
     {
         public static void Run()
         {
+            Console.WriteLine("[Example Basic Usage] # RedactEmbeddedImages.cs : Redact DOCX embedded images");
+
+            // Prepare output directory and source file.
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.LOREMIPSUM_PDF);
+
             //ExStart:ImageAreaRedaction_20.7
-            using (Redactor redactor = new Redactor(Constants.SAMPLE_DOCX))
+            using (Redactor redactor = new Redactor(sourceFile))
             {
                 System.Drawing.Point samplePoint = new System.Drawing.Point(516, 311);
                 System.Drawing.Size sampleSize = new System.Drawing.Size(170, 35);
@@ -22,10 +25,13 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.ImageRedactions
                               new RegionReplacementOptions(System.Drawing.Color.Blue, sampleSize)));
                 if (result.Status != RedactionStatus.Failed)
                 {
-                    redactor.Save();
-                };
+                    var outputFile = redactor.Save();
+                    Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");
+                }
+                ;
             }
             //ExEnd:ImageAreaRedaction_20.7
+            Console.WriteLine("======================================");
         }
     }
 }

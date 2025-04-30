@@ -1,10 +1,7 @@
 ﻿using System;
-using System.IO;
-using System.Text.RegularExpressions;
 
 namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.TextRedactions
 {
-    using GroupDocs.Redaction.Options;
     using GroupDocs.Redaction.Redactions;
 
     /// <summary>
@@ -14,11 +11,18 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.TextRedactions
     {
         public static void Run()
         {
-            using (Redactor redactor  = new Redactor(Constants.LOREMIPSUM_PDF))
+            Console.WriteLine("[Example Basic Usage] # UseRegexForParagraph.cs : Redact paragraphs content");
+
+            // Prepare output directory and source file.
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.LOREMIPSUM_PDF);
+
+            using (Redactor redactor  = new Redactor(sourceFile))
             {
                 redactor.Apply(new RegexRedaction("(Lorem(\n|.)+?urna)", new ReplacementOptions(System.Drawing.Color.Red)));
-                redactor.Save();
+                var outputFile = redactor.Save();
+                Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");
             }
+            Console.WriteLine("======================================");
         }
     }
 }

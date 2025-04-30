@@ -1,6 +1,4 @@
 ﻿using System;
-using System.IO;
-using System.Text.RegularExpressions;
 
 namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.AnnotationRedactions
 {
@@ -14,11 +12,18 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.AnnotationRedactions
     {
         public static void Run()
         {
-            using (Redactor redactor = new Redactor(Constants.ANNOTATED_XLSX))
+            Console.WriteLine("[Example Basic Usage] # RedactAnnotations.cs : Redact annotation in a document");
+
+            // Prepare output directory and source file.
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.ANNOTATED_XLSX);
+
+            using (Redactor redactor = new Redactor(sourceFile))
             {
                 redactor.Apply(new AnnotationRedaction("(?im:john)", "[redacted]"));
-                redactor.Save(new SaveOptions() { AddSuffix = true, RasterizeToPDF = false });
+                var outputFile = redactor.Save(new SaveOptions() { AddSuffix = true, RasterizeToPDF = false });
+                Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");
             }
+            Console.WriteLine("======================================");
         }
     }
 }

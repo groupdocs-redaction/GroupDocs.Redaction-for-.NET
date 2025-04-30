@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Text.RegularExpressions;
 
 namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.SpreadsheetRedactions
@@ -14,7 +13,12 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.SpreadsheetRedactions
     {
         public static void Run()
         {
-            using (Redactor redactor  = new Redactor(Constants.SAMPLE_XLSX))
+            Console.WriteLine("[Example Basic Usage] # FilterBySpreadsheetAndColumn.cs : Redact content in specific column");
+
+            // Prepare output directory and source file.
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.SAMPLE_XLSX);
+
+            using (Redactor redactor  = new Redactor(sourceFile))
             {
                 var filter = new CellFilter()
                 {
@@ -25,9 +29,12 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.SpreadsheetRedactions
                 RedactorChangeLog result = redactor.Apply(new CellColumnRedaction(filter, expression, new ReplacementOptions("[customer email]")));
                 if (result.Status != RedactionStatus.Failed)
                 {
-                    redactor.Save(new SaveOptions() { AddSuffix = true, RasterizeToPDF = false });
-                };
+                    var outputFile = redactor.Save(new SaveOptions() { AddSuffix = true, RasterizeToPDF = false });
+                    Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");
+                }
+                ;
             }
+            Console.WriteLine("======================================");
         }
     }
 }

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.IO;
-using System.Text.RegularExpressions;
 
 namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.TextRedactions
 {
@@ -13,14 +11,21 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.TextRedactions
     {
         public static void Run()
         {
-            using (Redactor redactor  = new Redactor(Constants.ARABIC_PDF))
+            Console.WriteLine("[Example Basic Usage] # UseExactPhraseRightToLeft.cs : Redact phrases in right-to-left languages like Arabic or Hebrew");
+
+            // Prepare output directory and source file.
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.ARABIC_PDF);
+
+            using (Redactor redactor  = new Redactor(sourceFile))
             {
                 ExactPhraseRedaction red = new ExactPhraseRedaction("أﺑﺠﺪ", new ReplacementOptions("[test]"));
                 red.IsRightToLeft = true;
 
                 redactor.Apply(red);
-                redactor.Save();
+                var outputFile = redactor.Save();
+                Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");
             }
+            Console.WriteLine("======================================");
         }
     }
 }

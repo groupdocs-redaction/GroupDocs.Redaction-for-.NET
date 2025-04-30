@@ -1,10 +1,8 @@
 using System;
-using System.IO;
 
 namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.RemovePageRedactions
 {
     using GroupDocs.Redaction.Redactions;
-    using GroupDocs.Redaction.Options;
 
     /// <summary>
     /// The following example demonstrates how to remove 3 frames from an animated GIF image.
@@ -13,15 +11,22 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.RemovePageRedactions
     {
         public static void Run()
         {
-            using (Redactor redactor = new Redactor(Constants.ANIMATED_GIF))
+            Console.WriteLine("[Example Basic Usage] # RemoveFrameFromImage.cs : Remove multi-page image frames");
+
+            // Prepare output directory and source file.
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.ANIMATED_GIF);
+
+            using (Redactor redactor = new Redactor(sourceFile))
             {
-                // Removes 5 frames starting from 3nd one, requires at least 7 frames
+                // Removes 3 frames starting from 3nd one, requires at least 7 frames
                 if (redactor.GetDocumentInfo().PageCount >= 7)
                 {
                     redactor.Apply(new RemovePageRedaction(PageSeekOrigin.Begin, 2, 5));
-                    redactor.Save();
+                    var outputFile = redactor.Save();
+                    Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");
                 }
             }
+            Console.WriteLine("======================================");
         }
     }
 }

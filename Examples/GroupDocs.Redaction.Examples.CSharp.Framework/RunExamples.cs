@@ -122,13 +122,13 @@ namespace GroupDocs.Redaction.Examples.CSharp
             AdvancedUsage.LoadingDocuments.LoadFromLocalDisc.Run();
 
             // Open file from stream
-            //AdvancedUsage.LoadingDocuments.LoadFromStream.Run();
+            AdvancedUsage.LoadingDocuments.LoadFromStream.Run();
 
             //Redact a Password-Protected Document
             AdvancedUsage.LoadingDocuments.OpenPasswordProtectedFile.Run();
 
             //Use custom ILogger implementation 
-            //AdvancedUsage.LoadingDocuments.UseAdvancedLogging.Run();
+            AdvancedUsage.LoadingDocuments.UseAdvancedLogging.Run();
 
             //Pre-rasterize document 
             AdvancedUsage.LoadingDocuments.PreRasterize.Run();
@@ -145,7 +145,7 @@ namespace GroupDocs.Redaction.Examples.CSharp
             AdvancedUsage.SavingDocuments.SaveOverwritingOriginalFile.Run();
 
             //Save the document to a custom location using stream
-            //AdvancedUsage.SavingDocuments.SaveToStream.Run();
+            AdvancedUsage.SavingDocuments.SaveToStream.Run();
 
             // Save with default options
             AdvancedUsage.SavingDocuments.SaveWithDefaultOptions.Run();
@@ -202,7 +202,7 @@ namespace GroupDocs.Redaction.Examples.CSharp
             AdvancedUsage.CreateRedactionPolicy.Run();
 
             //Configure redactions in XML and apply them to any document as a single redaction profile.
-            //AdvancedUsage.UseRedactionPolicy.Run();
+            AdvancedUsage.UseRedactionPolicy.Run();
 
             //Create a PDF document with page image redactions 
             AdvancedUsage.CreatePDFWithImageRedaction.Run();

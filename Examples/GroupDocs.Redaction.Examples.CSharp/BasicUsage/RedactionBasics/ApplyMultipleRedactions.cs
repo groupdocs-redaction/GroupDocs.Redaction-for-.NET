@@ -1,6 +1,4 @@
 ﻿using System;
-using System.IO;
-using System.Text.RegularExpressions;
 
 namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.RedactionBasics
 {
@@ -13,7 +11,12 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.RedactionBasics
     {
         public static void Run()
         {
-            using (Redactor redactor = new Redactor(Constants.SAMPLE_DOCX))
+            Console.WriteLine("[Example Basic Usage] # ApplyMultipleRedactions.cs : Redact file with multiple redactions");
+
+            // Prepare output directory and source file.
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.SAMPLE_DOCX);
+
+            using (Redactor redactor = new Redactor(sourceFile))
             {
                 var redactionList = new Redaction[]
                 {
@@ -27,7 +30,8 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.RedactionBasics
                 // false, if at least one redaction failed
                 if (result.Status != RedactionStatus.Failed)
                 {
-                    redactor.Save();
+                    var outputFile = redactor.Save();
+                    Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");
                 }
                 else
                 {
@@ -44,6 +48,7 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.RedactionBasics
                     }
                 }
             }
+            Console.WriteLine("======================================");
         }
     }
 }

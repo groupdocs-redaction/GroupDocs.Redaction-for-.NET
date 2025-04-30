@@ -1,5 +1,4 @@
 using System;
-using System.IO;
 
 namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.RemovePageRedactions
 {
@@ -13,7 +12,12 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.RemovePageRedactions
     {
         public static void Run()
         {
-            using (Redactor redactor = new Redactor(Constants.MULTIPAGE_PDF))
+            Console.WriteLine("[Example Basic Usage] # RemovePageRange.cs : Remove document pages");
+
+            // Prepare output directory and source file.
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.MULTIPAGE_PDF);
+
+            using (Redactor redactor = new Redactor(sourceFile))
             {
                 var info = redactor.GetDocumentInfo();
                 int startIndex = 1, pagesToDelete = 1;
@@ -21,9 +25,11 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.RemovePageRedactions
                 if (info.PageCount >= 2)
                 {
                     redactor.Apply(new RemovePageRedaction(PageSeekOrigin.Begin, startIndex, pagesToDelete));
-                    redactor.Save(new SaveOptions() { AddSuffix = true, RasterizeToPDF = false });
+                    var outputFile = redactor.Save(new SaveOptions() { AddSuffix = true, RasterizeToPDF = false });
+                    Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");
                 }
             }
+            Console.WriteLine("======================================");
         }
     }
 }

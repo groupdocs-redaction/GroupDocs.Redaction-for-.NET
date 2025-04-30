@@ -1,6 +1,4 @@
 ﻿using System;
-using System.IO;
-using System.Text.RegularExpressions;
 
 namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.ImageRedactions
 {
@@ -13,8 +11,13 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.ImageRedactions
     {
         public static void Run()
         {
+            Console.WriteLine("[Example Basic Usage] # RedactImageArea.cs : Redact image area");
+
+            // Prepare output directory and source file.
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.SAMPLE_JPG);
+
             //ExStart:ImageAreaRedaction_19.3
-            using (Redactor redactor  = new Redactor(Constants.SAMPLE_JPG))
+            using (Redactor redactor  = new Redactor(sourceFile))
             {
                 //Define the position on image
                 System.Drawing.Point samplePoint = new System.Drawing.Point(385, 485);
@@ -28,10 +31,13 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.ImageRedactions
                 if (result.Status != RedactionStatus.Failed)
                 {
                     //The redacted output will save as PDF 
-                    redactor.Save();
-                };
+                    var outputFile = redactor.Save();
+                    Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");
+                }
+                ;
             }
             //ExEnd:ImageAreaRedaction_19.3
+            Console.WriteLine("======================================");
         }
     }
 }

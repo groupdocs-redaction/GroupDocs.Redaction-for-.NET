@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Drawing;
-using System.Text;
 
 namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.UsingOCR
 {
@@ -19,8 +18,13 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.UsingOCR
     {
         public static void Run()
         {
+            Console.WriteLine("[Example Advanced Usage] # UseAsposeOCROnPremise.cs : Using Aspose.OCR");
+
+            // Prepare output directory and source file.
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.SAMPLE_PDF_4OCR);
+
             var settings = new RedactorSettings(new AsposeOCRStandaloneConnector(Constants.LicensePath));
-            using (var redactor = new Redactor(Constants.SAMPLE_PDF_4OCR, new LoadOptions(), settings))
+            using (var redactor = new Redactor(sourceFile, new LoadOptions(), settings))
             {
                 var marker = new ReplacementOptions(Color.Black);
                 var result = redactor.Apply(new Redaction[] {
@@ -30,9 +34,11 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.UsingOCR
                 });
                 if (result.Status != RedactionStatus.Failed)
                 {
-                    redactor.Save(new SaveOptions(false, "OnPremise"));
+                    var outputFile = redactor.Save(new SaveOptions(false, "OnPremise"));
+                    Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");
                 }
             }
+            Console.WriteLine("======================================");
         }
     }
 }

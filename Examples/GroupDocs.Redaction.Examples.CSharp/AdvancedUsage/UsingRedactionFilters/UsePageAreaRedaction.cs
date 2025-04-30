@@ -1,19 +1,9 @@
-﻿// <copyright company="Aspose Pty Ltd">
-//   Copyright (C) 2011-2023 GroupDocs. All Rights Reserved.
-// </copyright>
-
-using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using System.Text.RegularExpressions;
 
 namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.UsingRedactionFilters
 {
-    using GroupDocs.Redaction.Options;
     using GroupDocs.Redaction.Redactions;
-    using System.Text.RegularExpressions;
 
     /// <summary>
     /// The following example demonstrates how to apply PageAreaRedaction to the right half of the last page in a PDF document.
@@ -22,7 +12,12 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.UsingRedactionFilter
     {
         public static void Run()
         {
-            using (Redactor redactor = new Redactor(Constants.LOREMIPSUM_PDF))
+            Console.WriteLine("[Example Advanced Usage] # UsePageAreaRedaction.cs : Redact pages ares");
+
+            // Prepare output directory and source file.
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.LOREMIPSUM_PDF);
+
+            using (Redactor redactor = new Redactor(sourceFile))
             {
                 Regex rx = new Regex("urna");
                 ReplacementOptions optionsText = new ReplacementOptions("[redarea]");
@@ -34,9 +29,12 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.UsingRedactionFilter
                 RedactorChangeLog result = redactor.Apply(new PageAreaRedaction(rx, optionsText, optionsImg));
                 if (result.Status != RedactionStatus.Failed)
                 {
-                    redactor.Save();
-                };
+                    var outputFile = redactor.Save();
+                    Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");
+                }
+                ;
             }
+            Console.WriteLine("======================================");
         }
     }
 }

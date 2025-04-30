@@ -31,6 +31,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\ImageRedactions\RedactEmbeddedImages.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\TextRedactions\UseExactPhraseRightToLeft.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BasicUsage\TextRedactions\UseRegexForParagraph.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)HelperClasses\AsposeOCRStandaloneConnector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)HelperClasses\AsposeOCRForCloudConnector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)HelperClasses\ComputerVisionOcrConnector.cs" />

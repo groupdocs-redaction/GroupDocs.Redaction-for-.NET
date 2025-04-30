@@ -1,16 +1,8 @@
-// <copyright company="Aspose Pty Ltd">
-//   Copyright (C) 2011-2023 GroupDocs. All Rights Reserved.
-// </copyright>
-
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.SavingDocuments
 {
-    using GroupDocs.Redaction.Redactions;
     using GroupDocs.Redaction.Options;
 
     /// <summary>
@@ -20,7 +12,12 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.SavingDocuments
     {
         public static void Run()
         {
-            using (Redactor redactor = new Redactor(Constants.SAMPLE_DOCX))
+            Console.WriteLine("[Example Advanced Usage] # UseNoiseRasterizationOption.cs : Save document using noise rasterization");
+
+            // Prepare output directory and source file.
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.SAMPLE_DOCX);
+
+            using (Redactor redactor = new Redactor(sourceFile))
             {
                 // Save the document with the custom number and size of noise effects
                 var so = new SaveOptions();
@@ -28,8 +25,10 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.SavingDocuments
                 so.RedactedFileSuffix = "_scan";
                 so.Rasterization.AddAdvancedOption(AdvancedRasterizationOptions.Noise, 
                     new Dictionary<string, string>() { { "maxSpots", "150" }, { "spotMaxSize", "15" } });
-                redactor.Save(so);
+                var outputFile = redactor.Save(so);
+                Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");
             }
+            Console.WriteLine("======================================");
         }
     }
 }

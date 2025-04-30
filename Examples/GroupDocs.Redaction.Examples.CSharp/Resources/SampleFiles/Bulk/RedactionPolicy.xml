@@ -3,9 +3,6 @@
   <regexRedaction regularExpression="(John)" actionType="ReplaceString" replacement="foobar" />  
   <exactPhraseRedaction searchPhrase="foobar" caseSensitive="true" actionType="DrawBox" color="Red" />   
    
-  <cellColumnRedaction regularExpression="^\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$" replacement="[red1]" columnIndex="1" worksheetIndex="1" /> 
-  <cellColumnRedaction searchPhrase="John" replacement="[red2]" wokrsheetName="Sheet1" /> 
-   
   <eraseMetadataRedaction filter="All" />  
   <metadataSearchRedaction filter="Title, Author" replacement="foobar" valueExpression="(metasearch)" keyExpression="" />  
    

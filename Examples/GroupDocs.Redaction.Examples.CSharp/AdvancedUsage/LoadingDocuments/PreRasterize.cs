@@ -1,10 +1,4 @@
-﻿// <copyright company="Aspose Pty Ltd">
-//   Copyright (C) 2011-2023 GroupDocs. All Rights Reserved.
-// </copyright>
-
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
 
 namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.LoadingDocuments
 {
@@ -18,19 +12,24 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.LoadingDocuments
     {
         public static void Run()
         {
+            Console.WriteLine("[Example Advanced Usage] # CustomRedactionAI.cs : Use document rasterization");
+
+            // Prepare output directory and source file.
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.SAMPLE_DOCX);
+
             bool preRasterize = true;
-            using (Redactor redactor = new Redactor(Constants.SAMPLE_DOCX, new LoadOptions(preRasterize)))
+            using (Redactor redactor = new Redactor(sourceFile, new LoadOptions(preRasterize)))
             {
-                // Make changes to the file as a rasterized PDF, e.g. uisng ImageAreaRedaction:
-                System.Drawing.Point samplePoint = new System.Drawing.Point(516, 311);
-                System.Drawing.Size sampleSize = new System.Drawing.Size(170, 35);
-                RedactorChangeLog result = redactor.Apply(new ImageAreaRedaction(samplePoint,
-                                new RegionReplacementOptions(System.Drawing.Color.Blue, sampleSize)));
+                // Make changes to the file as a rasterized PDF, e.g. using ExactPhraseRedaction:
+                RedactorChangeLog result = redactor.Apply(new ExactPhraseRedaction("John Doe", 
+                    new ReplacementOptions("[personal]")));
                 if (result.Status != RedactionStatus.Failed)
                 {
-                    redactor.Save();
-                };
+                    var outputFile = redactor.Save();
+                    Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");
+                }
             }
+            Console.WriteLine("======================================");
         }
     }
 }

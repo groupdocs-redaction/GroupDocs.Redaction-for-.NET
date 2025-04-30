@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.SavingDocuments
 {
@@ -17,7 +12,12 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.SavingDocuments
     {
         public static void Run()
         {
-            using (Redactor redactor = new Redactor(Constants.MULTIPAGE_SAMPLE_DOCX))
+            Console.WriteLine("[Example Advanced Usage] # SelectSpecificPagesForRasterizedPDF.cs : Save redacted document to PDF with specific page rasterization");
+
+            // Prepare output directory and source file.
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.MULTIPAGE_SAMPLE_DOCX);
+
+            using (Redactor redactor = new Redactor(sourceFile))
             {
                 RedactorChangeLog result = redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions(System.Drawing.Color.Red)));
                 if (result.Status != RedactionStatus.Failed)
@@ -29,9 +29,11 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.SavingDocuments
                     options.Rasterization.PageCount = 1;                            // save only one page
                     options.Rasterization.Compliance = PdfComplianceLevel.PdfA1a;   // by default PdfComplianceLevel.Auto or PDF/A-1b
                     options.AddSuffix = true;
-                    redactor.Save(options);
+                    var outputFile = redactor.Save(options);
+                    Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");
                 }
             }
+            Console.WriteLine("======================================");
         }
     }
 }

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.ImageRedactions
 {
@@ -14,12 +12,19 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.ImageRedactions
     {
         public static void Run()
         {
-            using (Redactor redactor = new Redactor(Constants.SAMPLE_EXIF_JPG))
+            Console.WriteLine("[Example Basic Usage] # CleanImageMetadada.cs : Clean all image metadata");
+
+            // Prepare output directory and source file.
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.SAMPLE_JPG);
+
+            using (Redactor redactor = new Redactor(sourceFile))
             {
                 redactor.Apply(new EraseMetadataRedaction(MetadataFilters.All));
                 // Save the document to "*_Redacted.*" file in original format
-                redactor.Save(new SaveOptions() { AddSuffix = true, RasterizeToPDF = false });
+                var outputFile = redactor.Save(new SaveOptions() { AddSuffix = true, RasterizeToPDF = false });
+                Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");
             }
+            Console.WriteLine("======================================");
         }
     }
 }

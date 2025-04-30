@@ -1,6 +1,4 @@
-﻿
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Drawing;
 
 namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.UsingOCR
@@ -9,7 +7,7 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.UsingOCR
     using GroupDocs.Redaction.Redactions;
 
     using GroupDocs.Redaction.Examples.CSharp.HelperClasses;
-
+    
     /// <summary>
     /// The following example demonstrates how to use Aspose.OCR for Cloud SDK to OCR images.
     /// </summary>
@@ -20,8 +18,13 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.UsingOCR
     {
         public static void Run()
         {
+            Console.WriteLine("[Example Advanced Usage] # UseAsposeOCRForCloud.cs : Using Aspose.OCR for Cloud");
+
+            // Prepare output directory and source file.
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.SAMPLE_PDF_4OCR);
+
             var settings = new RedactorSettings(new AsposeOCRForCloudConnector());
-            using (var redactor = new Redactor(Constants.SAMPLE_PDF_4OCR, new LoadOptions(), settings))
+            using (var redactor = new Redactor(sourceFile, new LoadOptions(), settings))
             {
                 var marker = new ReplacementOptions(Color.Black);
                 var result = redactor.Apply(new Redaction[] {
@@ -31,9 +34,11 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.UsingOCR
                 });
                 if (result.Status != RedactionStatus.Failed)
                 {
-                    redactor.Save(new SaveOptions(false, "Aspose"));
+                    var outputFile = redactor.Save(new SaveOptions(false, "Aspose"));
+                    Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");
                 }
             }
+            Console.WriteLine("======================================");
         }
     }
 }

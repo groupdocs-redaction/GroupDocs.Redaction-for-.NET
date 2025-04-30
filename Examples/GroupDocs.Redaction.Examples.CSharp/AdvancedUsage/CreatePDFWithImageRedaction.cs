@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text.RegularExpressions;
 
 namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage
 {
     using GroupDocs.Redaction.Options;
     using GroupDocs.Redaction.Redactions;
-
-    using GroupDocs.Redaction.Examples.CSharp.HelperClasses;
 
     /// <summary>
     /// The following example demonstrates how to create a rasterized PDF from a Microsoft Word document and apply image redactions to its pages.
@@ -17,9 +13,15 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage
     {
         public static void Run()
         {
+            Console.WriteLine("[Example Advanced Usage] # CreatePDFWithImageRedaction.cs : Word to PDF rasterization");
+
+            // Prepare output directory and source file.
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.SAMPLE_DOCX);
+            string outputFile = Utils.GetOutputFileByExtension(sourceFile, ".pdf");
+
             var stream = new MemoryStream();
             // Rasterize the document before applying redactions
-            using (var redactor = new Redactor(Constants.SAMPLE_DOCX))
+            using (var redactor = new Redactor(sourceFile))
             {
                 // Perform annotation and textual redactions, if needed
                 redactor.Save(stream, new RasterizationOptions() { Enabled = true });
@@ -28,17 +30,18 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage
             // Re-open the rasterized PDF document to redact its pages as images
             using (var redactor = new Redactor(stream))
             {
-                RedactorChangeLog result = redactor.Apply(new Redactions.ImageAreaRedaction(new System.Drawing.Point(1160, 2375),
-                    new RegionReplacementOptions(System.Drawing.Color.Aqua, new System.Drawing.Size(1050, 720))));
+                RedactorChangeLog result = redactor.Apply(new Redactions.ImageAreaRedaction(new System.Drawing.Point(40, 160),
+                    new RegionReplacementOptions(System.Drawing.Color.Aqua, new System.Drawing.Size(350, 75))));
                 if (result.Status != RedactionStatus.Failed)
                 {
-                    string newFileName = Path.Combine(@"C:\\Temp\\", Path.GetFileNameWithoutExtension(Constants.SAMPLE_DOCX) + "_Raster.pdf");
-                    using (var fileStream = File.OpenWrite(newFileName))
+                    using (var fileStream = File.OpenWrite(outputFile))
                     {
                         redactor.Save(fileStream, new RasterizationOptions() { Enabled = false });
                     }
+                    Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");
                 }
             }
+            Console.WriteLine("======================================");
         }
     }
  }

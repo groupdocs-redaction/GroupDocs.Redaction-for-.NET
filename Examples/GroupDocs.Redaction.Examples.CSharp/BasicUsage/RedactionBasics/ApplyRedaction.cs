@@ -1,12 +1,4 @@
-﻿// <copyright company="Aspose Pty Ltd">
-//   Copyright (C) 2011-2018 GroupDocs. All Rights Reserved.
-// </copyright>
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 
 namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.RedactionBasics
 {
@@ -19,11 +11,18 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.RedactionBasics
     {
         public static void Run()
         {
-            using (Redactor redactor = new Redactor(Constants.SAMPLE_DOCX))
+            Console.WriteLine("[Example Basic Usage] # ApplyRedaction.cs : Redact file content");
+
+            // Prepare output directory and source file.
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.SAMPLE_DOCX);
+
+            using (Redactor redactor = new Redactor(sourceFile))
             {
                 redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions("[personal]")));
-                redactor.Save();
+                var outputFile = redactor.Save();
+                Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");
             }
+            Console.WriteLine("======================================");
         }
     }
 }

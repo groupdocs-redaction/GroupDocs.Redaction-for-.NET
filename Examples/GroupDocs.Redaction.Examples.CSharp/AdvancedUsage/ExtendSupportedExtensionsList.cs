@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text.RegularExpressions;
 
 namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage
 {
@@ -15,15 +12,22 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage
     {        
         public static void Run()
         {
+            Console.WriteLine("[Example Advanced Usage] # ExtendSupportedExtensionsList.cs : Extend supported formats list");
+
+            // Prepare output directory and source file.
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.SAMPLE_DUMP);
+
             RedactorConfiguration config = RedactorConfiguration.GetInstance();
             DocumentFormatConfiguration settings = config.FindFormat(".txt");
             settings.ExtensionFilter = settings.ExtensionFilter + ",.dump";
-            using (Redactor redactor = new Redactor(Constants.SAMPLE_DUMP))
+            using (Redactor redactor = new Redactor(sourceFile))
             {
                 // Here we can use document instance to perform redactions
                 redactor.Apply(new ExactPhraseRedaction("dolor", false, new ReplacementOptions("[redacted]")));
-                redactor.Save();
+                var outputFile = redactor.Save();
+                Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");
             }
+            Console.WriteLine("======================================");
         }
     }
 

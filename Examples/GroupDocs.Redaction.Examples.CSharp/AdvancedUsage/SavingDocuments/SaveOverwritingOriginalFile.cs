@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.SavingDocuments
 {
@@ -17,17 +12,22 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.SavingDocuments
     {
         public static void Run()
         {
-            // Make a copy of source file
-            File.Copy(Constants.SAMPLE_DOCX, Constants.OVERWRITTEN_SAMPLE_DOCX, true);
+            Console.WriteLine("[Example Advanced Usage] # SaveOverwritingOriginalFile.cs : Redact and overwrite document");
+
+            // Prepare output directory and source file.
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.SAMPLE_DOCX);
+
             // Apply redaction
-            using (Redactor redactor = new Redactor(Constants.OVERWRITTEN_SAMPLE_DOCX))
+            using (Redactor redactor = new Redactor(sourceFile))
             {
                 RedactorChangeLog result = redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions(System.Drawing.Color.Red)));
                 if (result.Status != RedactionStatus.Failed)
                 {
                     // Save the document in original format overwriting original file
-                    redactor.Save(new SaveOptions() { AddSuffix = false, RasterizeToPDF = false });
+                    var outputFile = redactor.Save(new SaveOptions() { AddSuffix = false, RasterizeToPDF = false });
+                    Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");
                 }
+                Console.WriteLine("======================================");
             }
         }
     }

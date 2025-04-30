@@ -1,17 +1,7 @@
-﻿// <copyright company="Aspose Pty Ltd">
-//   Copyright (C) 2011-2023 GroupDocs. All Rights Reserved.
-// </copyright>
-
-using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 
 namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.UsingRedactionFilters
 {
-    using GroupDocs.Redaction.Options;
     using GroupDocs.Redaction.Redactions;
 
     /// <summary>
@@ -21,7 +11,12 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.UsingRedactionFilter
     {
         public static void Run()
         {
-            using (Redactor redactor = new Redactor(Constants.MULTIPAGE_PDF))
+            Console.WriteLine("[Example Advanced Usage] # UsePdfRedactionFilters.cs : Using redaction filters");
+
+            // Prepare output directory and source file.
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.MULTIPAGE_PDF);
+
+            using (Redactor redactor = new Redactor(sourceFile))
             {
                 // Get the actual size information for the last page:
                 IDocumentInfo info = redactor.GetDocumentInfo();
@@ -35,9 +30,12 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.UsingRedactionFilter
                 RedactorChangeLog result = redactor.Apply(new ExactPhraseRedaction("bibliography", false, options));
                 if (result.Status != RedactionStatus.Failed)
                 {
-                    redactor.Save();
-                };
+                    var outputFile = redactor.Save();
+                    Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");
+                }
+                ;
             }
+            Console.WriteLine("======================================");
         }
     }
 }

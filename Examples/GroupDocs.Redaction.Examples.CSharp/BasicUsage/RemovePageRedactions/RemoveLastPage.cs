@@ -1,5 +1,4 @@
 using System;
-using System.IO;
 
 namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.RemovePageRedactions
 {
@@ -13,15 +12,22 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.RemovePageRedactions
     {
         public static void Run()
         {
-            using (Redactor redactor = new Redactor(Constants.MULTIPAGE_PDF))
+            Console.WriteLine("[Example Basic Usage] # RemoveLastPage.cs : Remove the last page from a document");
+
+            // Prepare output directory and source file.
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.MULTIPAGE_PDF);
+
+            using (Redactor redactor = new Redactor(sourceFile))
             {
                 // Requires at least 1 page
                 if (redactor.GetDocumentInfo().PageCount >= 1)
                 {
                     redactor.Apply(new RemovePageRedaction(PageSeekOrigin.End, 0, 1));
-                    redactor.Save(new SaveOptions() { AddSuffix = true, RasterizeToPDF = false });
+                    var outputFile = redactor.Save(new SaveOptions() { AddSuffix = true, RasterizeToPDF = false });
+                    Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");
                 }
             }
+            Console.WriteLine("======================================");
         }
     }
 }

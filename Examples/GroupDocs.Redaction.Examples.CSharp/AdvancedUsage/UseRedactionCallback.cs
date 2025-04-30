@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text.RegularExpressions;
 
 namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage
 {
@@ -17,12 +14,19 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage
     {
         public static void Run()
         {
-            using (Redactor redactor = new Redactor(Constants.SAMPLE_DOCX, new LoadOptions(), new RedactorSettings(new RedactionDump())))
+            Console.WriteLine("[Example Advanced Usage] # UseRedactionCallback.cs : Using callbacks");
+
+            // Prepare output directory and source file.
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.SAMPLE_DOCX);
+
+            using (Redactor redactor = new Redactor(sourceFile, new LoadOptions(), new RedactorSettings(new RedactionDump())))
             {
                 // Assign an instance before using Redactor
                 redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions("[personal]")));
-                redactor.Save();
+                var outputFile = redactor.Save();
+                Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");
             }
+            Console.WriteLine("======================================");
         }
     }
  }

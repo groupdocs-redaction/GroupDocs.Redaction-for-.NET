@@ -1,6 +1,4 @@
 ﻿using System;
-using System.IO;
-using System.Text.RegularExpressions;
 
 namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.TextRedactions
 {
@@ -13,11 +11,18 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.TextRedactions
     {
         public static void Run()
         {
-            using (Redactor redactor  = new Redactor(Constants.SAMPLE_DOCX))
+            Console.WriteLine("[Example Basic Usage] # UseColoredRectangle.cs : Hide text using color rectangle");
+
+            // Prepare output directory and source file.
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.SAMPLE_DOCX);
+
+            using (Redactor redactor  = new Redactor(sourceFile))
             {
                 redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions(System.Drawing.Color.Red)));
-                redactor.Save();
+                var outputFile = redactor.Save();
+                Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");
             }
+            Console.WriteLine("======================================");
         }
     }
 }

@@ -10,6 +10,7 @@ namespace GroupDocs.Redaction.Examples.CSharp.QuickStart
     {
         public static void Run()
         {
+            Console.WriteLine("[Quick Start] # SetLicenseFromStream.cs : Set license from stream");
             if (File.Exists(Constants.LicensePath))
             {
                 using (FileStream stream = File.OpenRead(Constants.LicensePath))
@@ -27,6 +28,7 @@ namespace GroupDocs.Redaction.Examples.CSharp.QuickStart
                                   "\nLearn more about licensing at https://purchase.groupdocs.com/faqs/licensing. " +
                                   "\nLearn how to request a temporary license at https://purchase.groupdocs.com/temporary-license.");
             }
+            Console.WriteLine("======================================");
         }
     }
 }

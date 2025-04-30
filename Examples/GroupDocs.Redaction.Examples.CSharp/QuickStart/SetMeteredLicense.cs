@@ -11,6 +11,10 @@ namespace GroupDocs.Redaction.Examples.CSharp.QuickStart
     {
         public static void Run()
         {
+            // Prepare output directory and source file.
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.CONVERSION_CONTROL_DOCX);
+
+            Console.WriteLine("[Quick Start] # SetMeteredLicense.cs : Set metered license");
             // initialize Metered API
             Metered metered = new Metered();
             // set-up credentials
@@ -19,17 +23,18 @@ namespace GroupDocs.Redaction.Examples.CSharp.QuickStart
             // do some work:
 
             // Load Word document
-            using (Redactor redactor = new Redactor(Constants.CONVERSION_CONTROL_DOCX))
+            using (Redactor redactor = new Redactor(sourceFile))
             {
                 // Do some redaction
                 RedactorChangeLog result = redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions(System.Drawing.Color.Red)));
 
                 // and get consumption quantity
-                decimal consumptionQuantitiy = Metered.GetConsumptionQuantity();
+                decimal consumptionQuantitity = Metered.GetConsumptionQuantity();
 
                 // get consumption credit (Supported since version 19.5)
                 decimal consumptionCredit = Metered.GetConsumptionCredit();
             }
+            Console.WriteLine("======================================");
         }
     }
 }

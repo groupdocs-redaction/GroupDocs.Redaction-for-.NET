@@ -1,6 +1,4 @@
 ﻿using System;
-using System.IO;
-using System.Text.RegularExpressions;
 
 namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.MetadataRedactions
 {
@@ -14,12 +12,19 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.MetadataRedactions
     {
         public static void Run()
         {
-            using (Redactor redactor  = new Redactor(Constants.SAMPLE_DOCX))
+            Console.WriteLine("[Example Basic Usage] # CleanMetadataWithFilter.cs : Clean filtered file metadata");
+
+            // Prepare output directory and source file.
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.SAMPLE_DOCX);
+
+            using (Redactor redactor  = new Redactor(sourceFile))
             {
                 redactor.Apply(new EraseMetadataRedaction(MetadataFilters.Author | MetadataFilters.Manager));
                 // Save the document to "*_Redacted.*" file in original format
-                redactor.Save(new SaveOptions() { AddSuffix = true, RasterizeToPDF = false });
+                var outputFile = redactor.Save(new SaveOptions() { AddSuffix = true, RasterizeToPDF = false });
+                Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");
             }
+            Console.WriteLine("======================================");
         }
     }
 }

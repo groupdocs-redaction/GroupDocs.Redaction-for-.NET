@@ -1,7 +1,4 @@
 ﻿using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Text;
 
 namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage
 {
@@ -17,6 +14,11 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage
     {
         public static void Run()
         {
+            Console.WriteLine("[Example Advanced Usage] # CreateRedactionPolicy.cs : Using redaction policies");
+
+            // Prepare output directory and source file.
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.POLICY_SAVE, false);
+
             //ExStart:ConfigurableRedaction_20.9
 
             //Configure Redactions
@@ -27,9 +29,10 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage
                 new EraseMetadataRedaction(MetadataFilters.All)
             });
             //Save RedactionPolicy
-            policy.Save(Constants.POLICY_SAVE);
+            policy.Save(sourceFile);
 
             //ExEnd:ConfigurableRedaction_20.9
+            Console.WriteLine("======================================");
         }
     }
 }

@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.LoadingDocuments
 {
@@ -17,13 +12,20 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.LoadingDocuments
     {
         public static void Run()
         {
+            Console.WriteLine("[Example Advanced Usage] # LoadPasswordProtectedFile.cs : Redact a password-protected document");
+
+            // Prepare output directory and source file.
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.PROTECTED_SAMPLE_DOCX);
+
             LoadOptions loadOptions = new LoadOptions("mypassword");
-            using (Redactor redactor = new Redactor(Constants.PROTECTED_SAMPLE_DOCX, loadOptions))
+            using (Redactor redactor = new Redactor(sourceFile, loadOptions))
             {
                 // Here we can use document instance to perform redactions
                 redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions("[personal]")));
-                redactor.Save();
+                var outputFile = redactor.Save();
+                Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");
             }
+            Console.WriteLine("======================================");
         }
     }
 }

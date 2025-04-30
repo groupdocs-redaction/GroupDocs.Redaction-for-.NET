@@ -1,9 +1,9 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
 namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage
 {
     using GroupDocs.Redaction.Redactions;
-    using System.Text.RegularExpressions;
 
     /// <summary>
     /// The following example demonstrates how to use custom redaction.
@@ -12,8 +12,12 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage
     {
         public static void Run()
         {
+            Console.WriteLine("[Example Advanced Usage] # CustomRedaction.cs : Using custom redactions");
             // Regular expressions may not always be flexible enough for document content processing.  
             // Use custom redaction to gain full control over the redaction process.
+
+            // Prepare output directory and source file.
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.LOREMIPSUM_PDF);
 
             // Use a regular expression to process the entire text within a custom handler.
             Regex regex = new Regex(".*");
@@ -27,19 +31,20 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage
             var redactions = new Redaction[] { textRedaction };
 
             // Currently, custom redaction is supported only for PDFs
-            using (Redactor redactor = new Redactor(Constants.LOREMIPSUM_PDF))
+            using (Redactor redactor = new Redactor(sourceFile))
             {
                 RedactorChangeLog result = redactor.Apply(redactions);
                 if (result.Status != RedactionStatus.Failed)
                 {
-                    redactor.Save(new Options.SaveOptions(false, "Custom_Redaction_Result"));
-                    Console.WriteLine("Custom redaction performed");
+                    var outputFile = redactor.Save(new Options.SaveOptions(false, "Custom_Redaction_Result"));
+                    Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");
                 }
                 else
                 {
                     Console.WriteLine("Custom redaction failed");
                 }
             }
+            Console.WriteLine("======================================");
         }
 
         // Implement a custom redaction handler.
