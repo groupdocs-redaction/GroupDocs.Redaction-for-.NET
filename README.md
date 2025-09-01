@@ -15,7 +15,7 @@ Directory | Description
 
 ## Document Redaction Features
 
-- Remove private or confidential content from [25+ different file formats](https://docs.groupdocs.com/redaction/net/supported-document-formats).
+- Remove private or confidential content from [30+ different file formats](https://docs.groupdocs.com/redaction/net/supported-document-formats).
 - Clear document metadata, comments, and annotations.
 - Create a rasterized PDF version of redacted files for stronger protection.
 - Preserve the original file format after redaction.
@@ -29,28 +29,11 @@ Directory | Description
 **Metadata:** Remove or replace metadata fields.\
 **Annotation:** Delete or redact document annotations.
 
-## Redaction Support for Documents & Metadata
-
-**Fixed Layout:** PDF\
-**Microsoft Word:** DOC, DOT, DOCX, DOCM, DOTX, DOTM, RTF\
-**Microsoft Excel:** XLSX, XLSM, XLTX, XLTM, XLS, XLT, CSV\
-**Microsoft PowerPoint:** PPT, PPTX, PPSX, POT, PPS, PPTM, PPSM, POTM\
-**Image:** JPEG, TIF, TIFF, PNG, BMP, GIF
-
-## Redaction Support for Annotations & Comments
-
-**Fixed Layout:** PDF\
-**Microsoft Word:** DOC, DOT, DOCX, DOCM, DOTX, DOTM, RTF\
-**Microsoft Excel:** XLSX, XLSM, XLTX, XLTM, XLS, XLT, CSV\
-**Microsoft PowerPoint:** PPT, PPTX, PPSX, POT, PPS, PPTM, PPSM, POTM
-
 ## Develop & Deploy Anywhere
 
-**Microsoft Windows:** Windows Desktop & Server (x86, x64), Windows Azure\
-**macOS:** Mac OS X\
-**Linux:** Ubuntu, OpenSUSE, CentOS, and others\
-**Development Environments:** Microsoft Visual Studio, Xamarin.Android, Xamarin.IOS, Xamarin.Mac, MonoDevelop 2.4 and later\
-**Supported Frameworks:** .NET Framework 2.0 or higher, .NET Standard 2.0, .NET Core 2.0 or higher
+**Operation Systems:** Windows, Linux, Mac OS\
+**Supported IDE:** Microsoft Visual Studio, JetBrains Rider, Microsoft Visual Code\
+**Environment:** .NET Framework 4.6.2 or higher, .NET Core 3.1 or higher
 
 ## How to Run Examples
 
