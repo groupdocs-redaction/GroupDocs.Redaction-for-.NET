@@ -49,7 +49,7 @@ Directory | Description
 2. **Get the solution**: Clone or download this repository.
 
    ```bash
-   git clone git@github.com:groupdocs-redaction/GroupDocs.Redaction-for-.NET.git
+    git clone https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-.NET.git
    ```
 
 3. **Install Package**: To install the package, use NuGet packages manager or call package install command in console. Alternatively, you can download packages from the official [GroupDocs Releases](https://releases.groupdocs.com/redaction/net/#direct-download) website.
