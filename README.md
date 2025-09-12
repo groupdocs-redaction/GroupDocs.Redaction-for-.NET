@@ -1,6 +1,6 @@
 [Product Page](https://products.groupdocs.com/redaction/net) | [Docs](https://docs.groupdocs.com/redaction/net) | [Free Web Demo](https://products.groupdocs.app/redaction/family) | [API Reference](https://apireference.groupdocs.com/redaction/net) | [Blog](https://blog.groupdocs.com/category/redaction/) | [Search](https://search.groupdocs.com/) | [Free Support](https://forum.groupdocs.com/c/redaction) | [Temporary License](https://purchase.groupdocs.com/temporary-license)
 
-# GroupDocs.Redaction-for-.NET
+# GroupDocs.Redaction for .NET
 
 [![banner](https://raw.githubusercontent.com/groupdocs/groupdocs.github.io/master/img/banners/groupdocs-redaction-net-banner.png)](https://releases.groupdocs.com/conversion/python-net/)
 
