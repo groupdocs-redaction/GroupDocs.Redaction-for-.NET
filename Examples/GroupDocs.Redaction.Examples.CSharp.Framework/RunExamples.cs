@@ -162,7 +162,7 @@ namespace GroupDocs.Redaction.Examples.CSharp
             // Use grayscale rasterization option
             AdvancedUsage.SavingDocuments.UseGrayscaleRasterizationOption.Run();
 
-            // Use noise rasterizationo ption
+            // Use noise rasterization option
             AdvancedUsage.SavingDocuments.UseNoiseRasterizationOption.Run();
 
             // Use tilt rasterization option
@@ -172,7 +172,7 @@ namespace GroupDocs.Redaction.Examples.CSharp
 
             #region Using OCR
             // Use Aspose.OCR for .NET API
-            AdvancedUsage.UsingOCR.UseAsposeOCROnPremise.Run();
+            //AdvancedUsage.UsingOCR.UseAsposeOCROnPremise.Run();
 
             // Use Aspose.OCR for Cloud SDK
             //AdvancedUsage.UsingOCR.UseAsposeOCRForCloud.Run();
