@@ -17,7 +17,7 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.SavingDocuments
 
             // Prepare output directory and source file.
             string sourceFile = Utils.PrepareOutputDirectory(Constants.SAMPLE_DOCX);
-            string outputFile = Utils.GetOutputFile(sourceFile);
+            string outputFile = Utils.GetOutputFileByExtension(sourceFile, ".pdf");
 
             using (Redactor redactor = new Redactor(sourceFile))
             {

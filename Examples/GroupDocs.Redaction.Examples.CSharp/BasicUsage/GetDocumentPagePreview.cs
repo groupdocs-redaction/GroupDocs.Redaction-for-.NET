@@ -20,7 +20,7 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage
             // Take preview of the first page
             int testPageNumber = 1;
             // Preview file name
-            string previewFileName = Utils.GetOutputFileByName(sourceFile, $"preview_page{testPageNumber}");
+            string previewFileName = Utils.GetOutputFileByName(sourceFile, $"preview_page{testPageNumber}.png");
             // Load the document to generate preview
             using (Redactor redactor = new Redactor(sourceFile))
             {

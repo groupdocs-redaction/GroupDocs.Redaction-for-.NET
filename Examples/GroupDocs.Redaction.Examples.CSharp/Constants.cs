@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 
 namespace GroupDocs.Redaction.Examples.CSharp
 {
@@ -12,7 +7,7 @@ namespace GroupDocs.Redaction.Examples.CSharp
         /// <summary>
         /// License file path
         /// </summary>
-        public const string LicensePath = @"c:\Worx\Aspose\Data\License\Conholdate.Total.Product.Family.lic";
+        public const string LicensePath = @"C:\Yor_Licences_Folder\Yor_Licence.lic";
 
         /// <summary>
         /// Public key for dynabic account
