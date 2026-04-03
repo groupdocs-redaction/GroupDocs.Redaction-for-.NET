@@ -5,13 +5,29 @@ namespace GroupDocs.Redaction.Examples.CSharp
     class RunExamples
     {
         static void Main(string[] args)
-        {            
-            Console.WriteLine("Open RunExamples.cs. \nIn Main() method uncomment the example that you want to run.");
-            Console.WriteLine("=====================================================");
+        {
+            Console.WriteLine("=== GroupDocs.Redaction Examples Runner ===");
+            Console.WriteLine("Run all examples and check the \\bin\\Output folder for results.");
+            Console.WriteLine("Each example creates its own subfolder with the same name.");
+            Console.WriteLine();
 
-            // Please uncomment the example you want to try out
+            Console.WriteLine("Tips:");
+            Console.WriteLine("• To run only specific examples — comment out the unwanted ones.");
+            Console.WriteLine("• To run a single example quickly, use goto:");
+            Console.WriteLine("  goto lbl_SetLicenseFromFile;");
+            Console.WriteLine("  lbl_SetLicenseFromFile: ApplyRedaction.Run();");
+            Console.WriteLine();
+
+            Console.WriteLine("Starting examples execution...");
+            Console.WriteLine("=====================================================");
+            Console.WriteLine();
+
+            goto lbl_SetLicenseFromFile;
 
             #region Quick Start
+
+            lbl_SetLicenseFromFile:
+
             QuickStart.SetLicenseFromFile.Run();
             //QuickStart.SetLicenseFromStream.Run();
             //QuickStart.SetMeteredLicense.Run();
