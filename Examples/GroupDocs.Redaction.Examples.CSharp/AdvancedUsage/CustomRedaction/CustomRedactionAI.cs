@@ -58,7 +58,7 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage
                 {
                     // Insert your AI integration code here.
                 }
-                catch (System.Exception ex)
+                catch (System.Exception)
                 {
                     result.Apply = false;
                 }

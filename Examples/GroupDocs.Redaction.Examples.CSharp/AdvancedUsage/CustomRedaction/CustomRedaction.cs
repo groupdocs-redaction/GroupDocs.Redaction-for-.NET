@@ -64,7 +64,7 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage
                         result.Text = redactedText;
                     }
                 }
-                catch (System.Exception ex)
+                catch (System.Exception)
                 {
                     result.Apply = false;
                 }

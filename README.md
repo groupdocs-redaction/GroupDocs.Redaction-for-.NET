@@ -18,7 +18,6 @@ Directory | Description
 --------- | -----------
 [Demos](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-.NET/tree/master/Demos)  | Contains demo projects that demonstrate product features.
 [Examples](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-.NET/tree/master/Examples)  | Contains С# code samples and example files to help you quickly learn and test API features. 
-[Plugins](https://github.com/groupdocs-redaction/GroupDocs.Redaction-for-.NET/tree/master/Plugins/GroupDocsRedactionVSPlugin) | Contains Visual Studio Add-in to explore GroupDocs.Redaction for .NET examples.
 
 ## Document Redaction Features
 
