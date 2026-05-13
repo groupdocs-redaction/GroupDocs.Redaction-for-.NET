@@ -1,6 +1,6 @@
 using System;
 
-namespace GroupDocs.Redaction.Examples.CSharp
+namespace GroupDocs.Redaction.Examples.CSharp.Net80
 {
     class RunExamples
     {

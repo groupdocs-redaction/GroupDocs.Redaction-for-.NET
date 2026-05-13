@@ -1,6 +1,6 @@
 using System;
 
-namespace GroupDocs.Redaction.Examples.CSharp
+namespace GroupDocs.Redaction.Examples.CSharp.Framework462
 {
     class RunExamples
     {
@@ -40,7 +40,7 @@ namespace GroupDocs.Redaction.Examples.CSharp
             // Apply single redaction
             BasicUsage.RedactionBasics.ApplyRedaction.Run();
 
-            // Apply multiple redactions and analyze redaction result
+            // Apply multiple redactions and analyse redaction result
             BasicUsage.RedactionBasics.ApplyMultipleRedactions.Run();
             #endregion
 
@@ -100,10 +100,9 @@ namespace GroupDocs.Redaction.Examples.CSharp
 
             //Remove Image metadata.
             BasicUsage.ImageRedactions.CleanImageMetadada.Run();
-            
+
             //Redact embedded images.
             BasicUsage.ImageRedactions.RedactEmbeddedImages.Run();
-            
             #endregion
 
             #region Remove Page Redactions
