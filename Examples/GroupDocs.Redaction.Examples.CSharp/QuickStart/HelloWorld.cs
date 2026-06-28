@@ -5,6 +5,7 @@ namespace GroupDocs.Redaction.Examples.CSharp.QuickStart
 {
     using GroupDocs.Redaction.Options;
     using GroupDocs.Redaction.Redactions;
+    using GroupDocs.Redaction.Options.Drawing;
 
     /// <summary>
     /// Basic example of GroupDocs.Redaction usage
@@ -23,7 +24,9 @@ namespace GroupDocs.Redaction.Examples.CSharp.QuickStart
             using (Redactor redactor = new Redactor(sourceFile))
             {
                 // Do some redaction
-                RedactorChangeLog result = redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions(System.Drawing.Color.Red)));
+                // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
+                //RedactorChangeLog result = redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions(System.Drawing.Color.Red)));
+                RedactorChangeLog result = redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions(Color.Red)));
                 // Save document in original format with a given file name
                 using (var stream = File.OpenWrite(outputFile))
                 {

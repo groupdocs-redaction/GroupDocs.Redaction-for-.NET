@@ -3,6 +3,7 @@
 namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.TextRedactions
 {
     using GroupDocs.Redaction.Redactions;
+    using GroupDocs.Redaction.Options.Drawing;
 
     /// <summary>
     /// The following example demonstrates how to redact the whole paragraph in a PDF document
@@ -18,7 +19,9 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.TextRedactions
 
             using (Redactor redactor  = new Redactor(sourceFile))
             {
-                redactor.Apply(new RegexRedaction("(Lorem(\n|.)+?urna)", new ReplacementOptions(System.Drawing.Color.Red)));
+                // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
+                //redactor.Apply(new RegexRedaction("(Lorem(\n|.)+?urna)", new ReplacementOptions(System.Drawing.Color.Red)));
+                redactor.Apply(new RegexRedaction("(Lorem(\n|.)+?urna)", new ReplacementOptions(Color.Red)));
                 var outputFile = redactor.Save();
                 Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");
             }

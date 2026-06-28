@@ -3,6 +3,7 @@
 namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.ImageRedactions
 {
     using GroupDocs.Redaction.Redactions;
+    using GroupDocs.Redaction.Options.Drawing;
 
     /// <summary>
     /// The following example demonstrates how to redact a rectangular area of an image
@@ -20,14 +21,21 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.ImageRedactions
             using (Redactor redactor  = new Redactor(sourceFile))
             {
                 //Define the position on image
-                System.Drawing.Point samplePoint = new System.Drawing.Point(385, 485);
+                // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
+                //System.Drawing.Point samplePoint = new System.Drawing.Point(385, 485);
+                Point samplePoint = new Point(385, 485);
 
                 //Define the size of the area which need to be redacted
-                System.Drawing.Size sampleSize = new System.Drawing.Size(1793, 2069);
+                // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
+                //System.Drawing.Size sampleSize = new System.Drawing.Size(1793, 2069);
+                Size sampleSize = new Size(1793, 2069);
 
                 //Perform redaction
+                // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
+                //RedactorChangeLog result = redactor.Apply(new ImageAreaRedaction(samplePoint,
+                //                new RegionReplacementOptions(System.Drawing.Color.Blue, sampleSize)));
                 RedactorChangeLog result = redactor.Apply(new ImageAreaRedaction(samplePoint,
-                                new RegionReplacementOptions(System.Drawing.Color.Blue, sampleSize)));
+                                new RegionReplacementOptions(Color.Blue, sampleSize)));
                 if (result.Status != RedactionStatus.Failed)
                 {
                     //The redacted output will save as PDF 

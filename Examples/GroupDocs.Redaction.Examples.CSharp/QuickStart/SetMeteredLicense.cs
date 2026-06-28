@@ -1,4 +1,5 @@
 ﻿using GroupDocs.Redaction.Redactions;
+using GroupDocs.Redaction.Options.Drawing;
 using System;
 
 namespace GroupDocs.Redaction.Examples.CSharp.QuickStart
@@ -26,7 +27,9 @@ namespace GroupDocs.Redaction.Examples.CSharp.QuickStart
             using (Redactor redactor = new Redactor(sourceFile))
             {
                 // Do some redaction
-                RedactorChangeLog result = redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions(System.Drawing.Color.Red)));
+                // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
+                //RedactorChangeLog result = redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions(System.Drawing.Color.Red)));
+                RedactorChangeLog result = redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions(Color.Red)));
 
                 // and get consumption quantity
                 decimal consumptionQuantitity = Metered.GetConsumptionQuantity();

@@ -7,7 +7,7 @@ namespace GroupDocs.Redaction.Examples.CSharp
         /// <summary>
         /// License file path
         /// </summary>
-        public const string LicensePath = @"C:\Yor_Licences_Folder\Yor_Licence.lic";
+        public const string LicensePath = @"C:\Licenses\GroupDocs\Total\Subscription\Valid\2026\Conholdate.Total.Product.Family.lic";
 
         /// <summary>
         /// Public key for dynabic account

@@ -4,6 +4,7 @@ using System.Text.RegularExpressions;
 namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.UsingRedactionFilters
 {
     using GroupDocs.Redaction.Redactions;
+    using GroupDocs.Redaction.Options.Drawing;
 
     /// <summary>
     /// The following example demonstrates how to apply PageAreaRedaction to the right half of the last page in a PDF document.
@@ -23,9 +24,13 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.UsingRedactionFilter
                 ReplacementOptions optionsText = new ReplacementOptions("[redarea]");
                 optionsText.Filters = new RedactionFilter[] {
                     new PageRangeFilter(PageSeekOrigin.End, 0, 1), // last page
-                    new PageAreaFilter(new System.Drawing.Point(300, 0), new System.Drawing.Size(300, 840)) // right half of the page 300x840
+                    // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
+                    //new PageAreaFilter(new System.Drawing.Point(300, 0), new System.Drawing.Size(300, 840)) // right half of the page 300x840
+                    new PageAreaFilter(new Point(300, 0), new Size(300, 840)) // right half of the page 300x840
                 };
-                RegionReplacementOptions optionsImg = new RegionReplacementOptions(System.Drawing.Color.Chocolate, new System.Drawing.Size(100, 100));
+                // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
+                //RegionReplacementOptions optionsImg = new RegionReplacementOptions(System.Drawing.Color.Chocolate, new System.Drawing.Size(100, 100));
+                RegionReplacementOptions optionsImg = new RegionReplacementOptions(Color.Chocolate, new Size(100, 100));
                 RedactorChangeLog result = redactor.Apply(new PageAreaRedaction(rx, optionsText, optionsImg));
                 if (result.Status != RedactionStatus.Failed)
                 {

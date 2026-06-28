@@ -4,6 +4,7 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.SavingDocuments
 {
     using GroupDocs.Redaction.Redactions;
     using GroupDocs.Redaction.Options;
+    using GroupDocs.Redaction.Options.Drawing;
 
     /// <summary>
     /// The following example demonstrates how to save the redacted document, replacing an original file
@@ -20,7 +21,9 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.SavingDocuments
             // Apply redaction
             using (Redactor redactor = new Redactor(sourceFile))
             {
-                RedactorChangeLog result = redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions(System.Drawing.Color.Red)));
+                // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
+                //RedactorChangeLog result = redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions(System.Drawing.Color.Red)));
+                RedactorChangeLog result = redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions(Color.Red)));
                 if (result.Status != RedactionStatus.Failed)
                 {
                     // Save the document in original format overwriting original file

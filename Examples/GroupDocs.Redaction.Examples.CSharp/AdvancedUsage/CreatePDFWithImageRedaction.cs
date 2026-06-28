@@ -5,6 +5,7 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage
 {
     using GroupDocs.Redaction.Options;
     using GroupDocs.Redaction.Redactions;
+    using GroupDocs.Redaction.Options.Drawing;
 
     /// <summary>
     /// The following example demonstrates how to create a rasterized PDF from a Microsoft Word document and apply image redactions to its pages.
@@ -30,8 +31,11 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage
             // Re-open the rasterized PDF document to redact its pages as images
             using (var redactor = new Redactor(stream))
             {
-                RedactorChangeLog result = redactor.Apply(new Redactions.ImageAreaRedaction(new System.Drawing.Point(40, 160),
-                    new RegionReplacementOptions(System.Drawing.Color.Aqua, new System.Drawing.Size(350, 75))));
+                // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
+                //RedactorChangeLog result = redactor.Apply(new Redactions.ImageAreaRedaction(new System.Drawing.Point(40, 160),
+                //    new RegionReplacementOptions(System.Drawing.Color.Aqua, new System.Drawing.Size(350, 75))));
+                RedactorChangeLog result = redactor.Apply(new Redactions.ImageAreaRedaction(new Point(40, 160),
+                    new RegionReplacementOptions(Color.FromArgb(255, 0, 255, 255), new Size(350, 75))));
                 if (result.Status != RedactionStatus.Failed)
                 {
                     using (var fileStream = File.OpenWrite(outputFile))

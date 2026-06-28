@@ -141,6 +141,9 @@ namespace GroupDocs.Redaction.Examples.CSharp.Net80
             // Open file from stream
             AdvancedUsage.LoadingDocuments.LoadFromStream.Run();
 
+            // Open file specifying its file type
+            AdvancedUsage.LoadingDocuments.LoadWithFileType.Run();
+
             //Redact a Password-Protected Document
             AdvancedUsage.LoadingDocuments.OpenPasswordProtectedFile.Run();
 

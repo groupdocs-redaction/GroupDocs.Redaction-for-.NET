@@ -5,6 +5,7 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.SavingDocuments
 {
     using GroupDocs.Redaction.Options;
     using GroupDocs.Redaction.Redactions;
+    using GroupDocs.Redaction.Options.Drawing;
 
     /// <summary>
     /// The following example demonstrates how to save a document to stream.
@@ -22,7 +23,9 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.SavingDocuments
             using (Redactor redactor = new Redactor(sourceFile))
             {
                 // Here we can use document instance to perform redactions
-                RedactorChangeLog result = redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions(System.Drawing.Color.Red)));
+                // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
+                //RedactorChangeLog result = redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions(System.Drawing.Color.Red)));
+                RedactorChangeLog result = redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions(Color.Red)));
                 if (result.Status != RedactionStatus.Failed)
                 {
                     // Save the document to a custom location and convert its pages to images

@@ -3,6 +3,7 @@
 namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.RedactionBasics
 {
     using GroupDocs.Redaction.Redactions;
+    using GroupDocs.Redaction.Options.Drawing;
 
     /// <summary>
     /// The following example demonstrates how to apply a list of redactions
@@ -22,7 +23,9 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.RedactionBasics
                 {
                       new ExactPhraseRedaction("John Doe", new ReplacementOptions("[Client]")),
                       new RegexRedaction("Redaction", new ReplacementOptions("[Product]")),
-                      new RegexRedaction("\\d{2}\\s*\\d{2}[^\\d]*\\d{6}", new ReplacementOptions(System.Drawing.Color.Blue)),
+                      // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
+                      //new RegexRedaction("\\d{2}\\s*\\d{2}[^\\d]*\\d{6}", new ReplacementOptions(System.Drawing.Color.Blue)),
+                      new RegexRedaction("\\d{2}\\s*\\d{2}[^\\d]*\\d{6}", new ReplacementOptions(Color.Blue)),
                       new DeleteAnnotationRedaction(),
                       new EraseMetadataRedaction(MetadataFilters.All)
                 };

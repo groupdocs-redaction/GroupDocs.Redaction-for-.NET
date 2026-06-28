@@ -3,6 +3,7 @@
 namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.UsingRedactionFilters
 {
     using GroupDocs.Redaction.Redactions;
+    using GroupDocs.Redaction.Options.Drawing;
 
     /// <summary>
     /// The following example demonstrates how to apply redaction to the bottom half of the last page in a PDF document.
@@ -24,8 +25,11 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.UsingRedactionFilter
                 ReplacementOptions options = new Redactions.ReplacementOptions("[secret]");
                 options.Filters = new RedactionFilter[] {
                     new PageRangeFilter(PageSeekOrigin.End, 0, 1),
-                    new PageAreaFilter(new System.Drawing.Point(0, lastPage.Height/2),
-                        new System.Drawing.Size(lastPage.Width, lastPage.Height/2))
+                    // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
+                    //new PageAreaFilter(new System.Drawing.Point(0, lastPage.Height/2),
+                    //    new System.Drawing.Size(lastPage.Width, lastPage.Height/2))
+                    new PageAreaFilter(new Point(0, lastPage.Height/2),
+                        new Size(lastPage.Width, lastPage.Height/2))
                 };
                 RedactorChangeLog result = redactor.Apply(new ExactPhraseRedaction("bibliography", false, options));
                 if (result.Status != RedactionStatus.Failed)

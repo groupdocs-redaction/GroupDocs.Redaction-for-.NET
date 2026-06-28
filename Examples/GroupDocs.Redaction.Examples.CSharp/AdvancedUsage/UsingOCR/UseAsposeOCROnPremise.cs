@@ -1,10 +1,11 @@
 ﻿using System;
-using System.Drawing;
+//using System.Drawing;
 
 namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.UsingOCR
 {
     using GroupDocs.Redaction.Options;
     using GroupDocs.Redaction.Redactions;
+    using GroupDocs.Redaction.Options.Drawing;
 
     using GroupDocs.Redaction.Examples.CSharp.HelperClasses;
 
@@ -26,6 +27,7 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.UsingOCR
             var settings = new RedactorSettings(new AsposeOCRStandaloneConnector(Constants.LicensePath));
             using (var redactor = new Redactor(sourceFile, new LoadOptions(), settings))
             {
+                // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
                 var marker = new ReplacementOptions(Color.Black);
                 var result = redactor.Apply(new Redaction[] {
                     new RegexRedaction(@"(?<=Dear\s+)([^,]+)", marker), // cardholder name

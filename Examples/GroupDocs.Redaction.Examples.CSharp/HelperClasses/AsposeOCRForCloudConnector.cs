@@ -1,6 +1,6 @@
 ﻿using System;
 using System.IO;
-using System.Drawing;
+//using System.Drawing;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -13,6 +13,7 @@ namespace GroupDocs.Redaction.Examples.CSharp.HelperClasses
     using Aspose.Ocr.Cloud.Sdk.Model.Requests;
 
     using GroupDocs.Redaction.Integration.Ocr;
+    using GroupDocs.Redaction.Options.Drawing;
 
     /// <summary>
     /// This is an example of IOcrConnector implementation, using Aspose.OCR for Cloud SDK.
@@ -79,7 +80,9 @@ namespace GroupDocs.Redaction.Examples.CSharp.HelperClasses
         {
             string lineText = line["values"].ToString();
             Rectangle lineRectangle = GetLineRectangle(line);
-            if (!string.IsNullOrEmpty(lineText) && !lineRectangle.IsEmpty)
+            // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
+            //if (!string.IsNullOrEmpty(lineText) && !lineRectangle.IsEmpty)
+            if (!string.IsNullOrEmpty(lineText) && !lineRectangle.Equals(Rectangle.Empty))
             {
                 return new TextLine(RegularTextLine.SplitToFragments(lineText, lineRectangle));
             }
@@ -92,6 +95,9 @@ namespace GroupDocs.Redaction.Examples.CSharp.HelperClasses
         private Rectangle GetLineRectangle(JToken line)
         {
             var rect = line["rect"];
+            // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
+            //return new System.Drawing.Rectangle(rect[0].Value<int>(), rect[1].Value<int>(), rect[2].Value<int>() - rect[0].Value<int>(),
+            //    rect[3].Value<int>() - rect[1].Value<int>());
             return new Rectangle(rect[0].Value<int>(), rect[1].Value<int>(), rect[2].Value<int>() - rect[0].Value<int>(),
                 rect[3].Value<int>() - rect[1].Value<int>());
         }
