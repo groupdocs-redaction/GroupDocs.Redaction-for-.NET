@@ -52,6 +52,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\SavingDocuments\SaveInOriginalFormat.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\SavingDocuments\SaveInRasterizedPDF.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\SavingDocuments\SaveOverwritingOriginalFile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\SavingDocuments\SaveWordWithOoxmlCompliance.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\SavingDocuments\SelectSpecificPagesForRasterizedPDF.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\SavingDocuments\UseAdvancedRasterizationOptions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AdvancedUsage\SavingDocuments\UseBorderRasterizationOption.cs" />

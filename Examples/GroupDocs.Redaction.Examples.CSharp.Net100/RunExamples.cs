@@ -12,8 +12,8 @@ namespace GroupDocs.Redaction.Examples.CSharp.Net100
             Console.WriteLine();
 
             Console.WriteLine("Tips:");
-            Console.WriteLine("• To run only specific examples — comment out the unwanted ones.");
-            Console.WriteLine("• To run a single example quickly, use goto:");
+            Console.WriteLine("â€¢ To run only specific examples â€” comment out the unwanted ones.");
+            Console.WriteLine("â€¢ To run a single example quickly, use goto:");
             Console.WriteLine("  goto lbl_SetLicenseFromFile;");
             Console.WriteLine("  lbl_SetLicenseFromFile: ApplyRedaction.Run();");
             Console.WriteLine();
@@ -48,19 +48,19 @@ namespace GroupDocs.Redaction.Examples.CSharp.Net100
             //Perform an exact phrase redaction
             BasicUsage.TextRedactions.UseExactPhraseRedaction.Run();
 
-            //Perform a case sensitive exact phrase redaction 
+            // Perform a case sensitive exact phrase redaction 
             BasicUsage.TextRedactions.UseExactPhraseCaseSensitive.Run();
 
-            //Replace text with colored rectangle 
+            // Replace text with colored rectangle 
             BasicUsage.TextRedactions.UseColoredRectangle.Run();
 
-            //Replace arabic (or any right-to-left) text  
+            // Replace Arabic (or any right-to-left) text  
             BasicUsage.TextRedactions.UseExactPhraseRightToLeft.Run();
 
-            //Peform a regular expression redaction
+            // Apply a regular expression redaction
             BasicUsage.TextRedactions.UseRegularExpression.Run();
 
-            //Redact whole paragraph from a document
+            // Redact whole paragraph from a document
             BasicUsage.TextRedactions.UseRegexForParagraph.Run();
             #endregion
 
@@ -187,6 +187,9 @@ namespace GroupDocs.Redaction.Examples.CSharp.Net100
 
             // Use tilt rasterization option
             AdvancedUsage.SavingDocuments.UseTiltRasterizationOption.Run();
+
+            // Save Word processing document with OOXML compliance level
+            AdvancedUsage.SavingDocuments.SaveWordWithOoxmlCompliance.Run();
 
             #endregion // Loading and Saving
 

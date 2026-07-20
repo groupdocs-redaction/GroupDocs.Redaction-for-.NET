@@ -12,7 +12,7 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.MetadataRedactions
     {
         public static void Run()
         {
-            Console.WriteLine("[Example Basic Usage] # CleanImageMetadada.cs : Clean all file metadata");
+            Console.WriteLine("[Example Basic Usage] # CleanMetadata.cs : Clean all file metadata");
 
             // Prepare output directory and source file.
             string sourceFile = Utils.PrepareOutputDirectory(Constants.SAMPLE_DOCX);

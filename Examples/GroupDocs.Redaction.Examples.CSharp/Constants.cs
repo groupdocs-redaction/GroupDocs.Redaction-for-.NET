@@ -30,11 +30,11 @@ namespace GroupDocs.Redaction.Examples.CSharp
 	    }
         
         // WordProcessing documents
-        public static string SAMPLE_DOCX = GetSampleFilePath("Doc/sample.docx");
-        public static string CONVERSION_CONTROL_DOCX = GetSampleFilePath("Doc/demo.docx");
-        public static string PROTECTED_SAMPLE_DOCX = GetSampleFilePath("Doc/protected_sample.docx");
-        public static string OVERWRITTEN_SAMPLE_DOCX = GetSampleFilePath("Doc/overwritten_sample.docx");
-        public static string MULTIPAGE_SAMPLE_DOCX = GetSampleFilePath("Doc/multipage_sample.docx");
+        public static string SAMPLE_DOCX = GetSampleFilePath("Wordprocessing/sample.docx");
+        public static string CONVERSION_CONTROL_DOCX = GetSampleFilePath("Wordprocessing/demo.docx");
+        public static string PROTECTED_SAMPLE_DOCX = GetSampleFilePath("Wordprocessing/protected_sample.docx");
+        public static string OVERWRITTEN_SAMPLE_DOCX = GetSampleFilePath("Wordprocessing/overwritten_sample.docx");
+        public static string MULTIPAGE_SAMPLE_DOCX = GetSampleFilePath("Wordprocessing/multipage_sample.docx");
 
         // PDF
         public static string SAMPLE_PDF_4OCR = GetSampleFilePath("Pdf/OCR sample.pdf");
@@ -43,18 +43,19 @@ namespace GroupDocs.Redaction.Examples.CSharp
         public static string ARABIC_PDF = GetSampleFilePath("Pdf/Arabic.pdf");
 
         // Presentations
+        public static string SAMPLE_PPTX = GetSampleFilePath("Presentations/sample.pptx");
 
         // Spreadsheets
-        public static string ANNOTATED_XLSX = GetSampleFilePath("Xls/sample1.xlsx");
-        public static string SAMPLE_XLSX = GetSampleFilePath("Xls/sample.xlsx");
+        public static string ANNOTATED_XLSX = GetSampleFilePath("Spreadsheets/sample1.xlsx");
+        public static string SAMPLE_XLSX = GetSampleFilePath("Spreadsheets/sample.xlsx");
 
         // Images
-        public static string SAMPLE_JPG = GetSampleFilePath("Image/sample.jpg");
-        public static string SAMPLE_EXIF_JPG = GetSampleFilePath("Image/exif.jpg");
-        public static string ANIMATED_GIF = GetSampleFilePath("Image/sample.gif");
+        public static string SAMPLE_JPG = GetSampleFilePath("Images/sample.jpg");
+        public static string SAMPLE_EXIF_JPG = GetSampleFilePath("Images/exif.jpg");
+        public static string ANIMATED_GIF = GetSampleFilePath("Images/sample.gif");
 
         // Text files
-        public static string SAMPLE_DUMP = GetSampleFilePath("Doc/sample.dump");
+        public static string SAMPLE_DUMP = GetSampleFilePath("Wordprocessing/sample.dump");
 
         // Policy test files
         public static string POLICY_FILE = GetSampleFilePath("Bulk/RedactionPolicy.xml");

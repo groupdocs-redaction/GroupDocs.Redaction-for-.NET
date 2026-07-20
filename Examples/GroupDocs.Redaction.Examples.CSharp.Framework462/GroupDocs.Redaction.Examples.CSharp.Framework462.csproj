@@ -49,8 +49,8 @@
     <Reference Include="Aspose.Ocr.Cloud.Sdk, Version=21.3.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Aspose.OCR-Cloud.21.3.1\lib\net45\Aspose.Ocr.Cloud.Sdk.dll</HintPath>
     </Reference>
-    <Reference Include="GroupDocs.Redaction, Version=26.6.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\GroupDocs.Redaction.Net462.26.6.0\lib\net462\GroupDocs.Redaction.dll</HintPath>
+    <Reference Include="GroupDocs.Redaction, Version=26.7.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\GroupDocs.Redaction.Net462.26.7.0\lib\net462\GroupDocs.Redaction.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>

@@ -8,12 +8,12 @@ namespace GroupDocs.Redaction.Examples.CSharp.Framework462
         {
             Console.WriteLine("=== GroupDocs.Redaction Examples Runner ===");
             Console.WriteLine("Run all examples and check the \\bin\\Output folder for results.");
-            Console.WriteLine("Each example creates its own subfolder with the same name.");
+            Console.WriteLine("Each example creates a separate subfolder with the same name as the example.");
             Console.WriteLine();
 
             Console.WriteLine("Tips:");
-            Console.WriteLine("• To run only specific examples — comment out the unwanted ones.");
-            Console.WriteLine("• To run a single example quickly, use goto:");
+            Console.WriteLine("â€¢ To run only specific examples â€” comment out the unwanted ones.");
+            Console.WriteLine("â€¢ To run a single example quickly, use goto:");
             Console.WriteLine("  goto lbl_SetLicenseFromFile;");
             Console.WriteLine("  lbl_SetLicenseFromFile: ApplyRedaction.Run();");
             Console.WriteLine();
@@ -40,7 +40,7 @@ namespace GroupDocs.Redaction.Examples.CSharp.Framework462
             // Apply single redaction
             BasicUsage.RedactionBasics.ApplyRedaction.Run();
 
-            // Apply multiple redactions and analyse redaction result
+            // Apply multiple redactions and analyze the redaction result
             BasicUsage.RedactionBasics.ApplyMultipleRedactions.Run();
             #endregion
 
@@ -48,19 +48,19 @@ namespace GroupDocs.Redaction.Examples.CSharp.Framework462
             //Perform an exact phrase redaction
             BasicUsage.TextRedactions.UseExactPhraseRedaction.Run();
 
-            //Perform a case sensitive exact phrase redaction 
+            // Perform a case sensitive exact phrase redaction 
             BasicUsage.TextRedactions.UseExactPhraseCaseSensitive.Run();
 
-            //Replace text with colored rectangle 
+            // Replace text with colored rectangle 
             BasicUsage.TextRedactions.UseColoredRectangle.Run();
 
-            //Replace arabic (or any right-to-left) text  
+            // Replace Arabic (or any right-to-left) text  
             BasicUsage.TextRedactions.UseExactPhraseRightToLeft.Run();
 
-            //Peform a regular expression redaction
+            // Apply a regular expression redaction
             BasicUsage.TextRedactions.UseRegularExpression.Run();
 
-            //Redact whole paragraph from a document
+            // Redact whole paragraph from a document
             BasicUsage.TextRedactions.UseRegexForParagraph.Run();
             #endregion
 
@@ -137,6 +137,9 @@ namespace GroupDocs.Redaction.Examples.CSharp.Framework462
             // Open file from local disc
             AdvancedUsage.LoadingDocuments.LoadFromLocalDisc.Run();
 
+            // Open file specifying its file type
+            AdvancedUsage.LoadingDocuments.LoadWithFileType.Run();
+
             // Open file from stream
             AdvancedUsage.LoadingDocuments.LoadFromStream.Run();
 
@@ -183,6 +186,9 @@ namespace GroupDocs.Redaction.Examples.CSharp.Framework462
 
             // Use tilt rasterization option
             AdvancedUsage.SavingDocuments.UseTiltRasterizationOption.Run();
+
+            // Save Word processing document with OOXML compliance level
+            AdvancedUsage.SavingDocuments.SaveWordWithOoxmlCompliance.Run();
 
             #endregion // Loading and Saving
 

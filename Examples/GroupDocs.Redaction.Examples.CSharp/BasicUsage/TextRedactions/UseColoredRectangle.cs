@@ -15,7 +15,7 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.TextRedactions
             Console.WriteLine("[Example Basic Usage] # UseColoredRectangle.cs : Hide text using color rectangle");
 
             // Prepare output directory and source file.
-            string sourceFile = Utils.PrepareOutputDirectory(Constants.SAMPLE_DOCX);
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.SAMPLE_PPTX);
 
             using (Redactor redactor  = new Redactor(sourceFile))
             {
