@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36301.6
+# Visual Studio Version 18
+VisualStudioVersion = 18.10.12224.181 stable
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupDocs.Redaction.Examples.CSharp.Framework462", "GroupDocs.Redaction.Examples.CSharp.Framework462\GroupDocs.Redaction.Examples.CSharp.Framework462.csproj", "{19390288-4210-4696-A7DE-7996AB8B0527}"
 EndProject
@@ -12,6 +12,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupDocs.Redaction.Examples.CSharp.Net80", "GroupDocs.Redaction.Examples.CSharp.Net80\GroupDocs.Redaction.Examples.CSharp.Net80.csproj", "{C9CCCFD7-1502-5B47-5C46-8E5858C01A26}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupDocs.Redaction.Examples.CSharp.Net100", "GroupDocs.Redaction.Examples.CSharp.Net100\GroupDocs.Redaction.Examples.CSharp.Net100.csproj", "{2FDCDA46-A859-8166-9210-3270177B08EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupDocs.Redaction.Examples.CSharp.Net60.Windows", "GroupDocs.Redaction.Examples.CSharp.Net60.Windows\GroupDocs.Redaction.Examples.CSharp.Net60.Windows.csproj", "{CE961622-693F-6B00-B0ED-FE8A9F07FF5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupDocs.Redaction.Examples.CSharp.Net80.Windows", "GroupDocs.Redaction.Examples.CSharp.Net80.Windows\GroupDocs.Redaction.Examples.CSharp.Net80.Windows.csproj", "{88515D8D-EFCC-7013-98BF-7DBEADA8EA9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupDocs.Redaction.Examples.CSharp.Net100.Windows", "GroupDocs.Redaction.Examples.CSharp.Net100.Windows\GroupDocs.Redaction.Examples.CSharp.Net100.Windows.csproj", "{09D74302-B202-D132-7504-786F261D017D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +41,18 @@ Global
 		{2FDCDA46-A859-8166-9210-3270177B08EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FDCDA46-A859-8166-9210-3270177B08EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FDCDA46-A859-8166-9210-3270177B08EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE961622-693F-6B00-B0ED-FE8A9F07FF5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE961622-693F-6B00-B0ED-FE8A9F07FF5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE961622-693F-6B00-B0ED-FE8A9F07FF5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE961622-693F-6B00-B0ED-FE8A9F07FF5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88515D8D-EFCC-7013-98BF-7DBEADA8EA9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88515D8D-EFCC-7013-98BF-7DBEADA8EA9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88515D8D-EFCC-7013-98BF-7DBEADA8EA9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88515D8D-EFCC-7013-98BF-7DBEADA8EA9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09D74302-B202-D132-7504-786F261D017D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09D74302-B202-D132-7504-786F261D017D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09D74302-B202-D132-7504-786F261D017D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09D74302-B202-D132-7504-786F261D017D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,9 +61,12 @@ Global
 		SolutionGuid = {8B57495E-42A7-4AC2-8F81-5B85C65F2556}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		GroupDocs.Redaction.Examples.CSharp\GroupDocs.Redaction.Examples.CSharp.projitems*{09d74302-b202-d132-7504-786f261d017d}*SharedItemsImports = 5
 		GroupDocs.Redaction.Examples.CSharp\GroupDocs.Redaction.Examples.CSharp.projitems*{19390288-4210-4696-a7de-7996ab8b0527}*SharedItemsImports = 4
 		GroupDocs.Redaction.Examples.CSharp\GroupDocs.Redaction.Examples.CSharp.projitems*{2fdcda46-a859-8166-9210-3270177b08ef}*SharedItemsImports = 5
+		GroupDocs.Redaction.Examples.CSharp\GroupDocs.Redaction.Examples.CSharp.projitems*{88515d8d-efcc-7013-98bf-7dbeada8ea9a}*SharedItemsImports = 5
 		GroupDocs.Redaction.Examples.CSharp\GroupDocs.Redaction.Examples.CSharp.projitems*{c9cccfd7-1502-5b47-5c46-8e5858c01a26}*SharedItemsImports = 5
+		GroupDocs.Redaction.Examples.CSharp\GroupDocs.Redaction.Examples.CSharp.projitems*{ce961622-693f-6b00-b0ed-fe8a9f07ff5b}*SharedItemsImports = 5
 		GroupDocs.Redaction.Examples.CSharp\GroupDocs.Redaction.Examples.CSharp.projitems*{dbd46031-7177-5cc7-14b9-cc197cba6e10}*SharedItemsImports = 5
 		GroupDocs.Redaction.Examples.CSharp\GroupDocs.Redaction.Examples.CSharp.projitems*{e37f6428-b9e3-4005-a40f-6909fd0e7ce6}*SharedItemsImports = 13
 	EndGlobalSection
