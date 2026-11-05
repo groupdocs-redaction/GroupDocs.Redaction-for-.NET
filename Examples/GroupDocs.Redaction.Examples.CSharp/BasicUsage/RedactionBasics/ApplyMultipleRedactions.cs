@@ -21,10 +21,8 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.RedactionBasics
             {
                 var redactionList = new Redaction[]
                 {
-                      new ExactPhraseRedaction("John Doe", new ReplacementOptions("[Client]")),
+                      new ExactPhraseRedaction("sensitive data", new ReplacementOptions("[Client]")),
                       new RegexRedaction("Redaction", new ReplacementOptions("[Product]")),
-                      // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
-                      //new RegexRedaction("\\d{2}\\s*\\d{2}[^\\d]*\\d{6}", new ReplacementOptions(System.Drawing.Color.Blue)),
                       new RegexRedaction("\\d{2}\\s*\\d{2}[^\\d]*\\d{6}", new ReplacementOptions(Color.Blue)),
                       new DeleteAnnotationRedaction(),
                       new EraseMetadataRedaction(MetadataFilters.All)

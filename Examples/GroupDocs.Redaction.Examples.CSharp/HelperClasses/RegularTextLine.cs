@@ -9,7 +9,6 @@ namespace GroupDocs.Redaction.Examples.CSharp.HelperClasses
 
     class RegularTextLine
     {
-        // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
         public static List<TextFragment> SplitToFragments(string lineText, Rectangle boundingRect)
         {
             List<TextFragment> fragments = new List<TextFragment>();

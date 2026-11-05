@@ -15,7 +15,7 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.UsingRedactionFilter
             Console.WriteLine("[Example Advanced Usage] # UsePdfRedactionFilters.cs : Using redaction filters");
 
             // Prepare output directory and source file.
-            string sourceFile = Utils.PrepareOutputDirectory(Constants.MULTIPAGE_PDF);
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.SAMPLE_PDF);
 
             using (Redactor redactor = new Redactor(sourceFile))
             {
@@ -25,9 +25,6 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.UsingRedactionFilter
                 ReplacementOptions options = new Redactions.ReplacementOptions("[secret]");
                 options.Filters = new RedactionFilter[] {
                     new PageRangeFilter(PageSeekOrigin.End, 0, 1),
-                    // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
-                    //new PageAreaFilter(new System.Drawing.Point(0, lastPage.Height/2),
-                    //    new System.Drawing.Size(lastPage.Width, lastPage.Height/2))
                     new PageAreaFilter(new Point(0, lastPage.Height/2),
                         new Size(lastPage.Width, lastPage.Height/2))
                 };

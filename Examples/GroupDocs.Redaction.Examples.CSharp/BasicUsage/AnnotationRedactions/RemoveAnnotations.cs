@@ -15,12 +15,12 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.AnnotationRedactions
             Console.WriteLine("[Example Basic Usage] # RemoveAnnotations.cs : Remove suitable document annotations");
 
             // Prepare output directory and source file.
-            string sourceFile = Utils.PrepareOutputDirectory(Constants.ANNOTATED_XLSX);
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.SAMPLE_XLSX);
 
             using (Redactor redactor  = new Redactor(sourceFile))
             {
                 // Delete all annotations, matching these criteria
-                redactor.Apply(new DeleteAnnotationRedaction("(?im:John Doe)"));
+                redactor.Apply(new DeleteAnnotationRedaction("(?im:annotations)"));
                 // Save the document to "*_Redacted.*" file in original format
                 var outputFile = redactor.Save(new SaveOptions() { AddSuffix = true, RasterizeToPDF = false });
                 Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");

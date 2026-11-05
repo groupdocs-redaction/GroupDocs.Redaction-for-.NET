@@ -21,7 +21,7 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.LoadingDocuments
             using (Redactor redactor = new Redactor(sourceFile, new LoadOptions(preRasterize)))
             {
                 // Make changes to the file as a rasterized PDF, e.g. using ExactPhraseRedaction:
-                RedactorChangeLog result = redactor.Apply(new ExactPhraseRedaction("John Doe", 
+                RedactorChangeLog result = redactor.Apply(new ExactPhraseRedaction("sensitive data", 
                     new ReplacementOptions("[personal]")));
                 if (result.Status != RedactionStatus.Failed)
                 {

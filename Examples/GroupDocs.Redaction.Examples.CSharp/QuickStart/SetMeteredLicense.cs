@@ -27,9 +27,7 @@ namespace GroupDocs.Redaction.Examples.CSharp.QuickStart
             using (Redactor redactor = new Redactor(sourceFile))
             {
                 // Do some redaction
-                // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
-                //RedactorChangeLog result = redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions(System.Drawing.Color.Red)));
-                RedactorChangeLog result = redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions(Color.Red)));
+                RedactorChangeLog result = redactor.Apply(new ExactPhraseRedaction("sensitive data", new ReplacementOptions(Color.Red)));
 
                 // and get consumption quantity
                 decimal consumptionQuantitity = Metered.GetConsumptionQuantity();

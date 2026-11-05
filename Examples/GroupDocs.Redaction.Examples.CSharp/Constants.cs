@@ -20,8 +20,6 @@ namespace GroupDocs.Redaction.Examples.CSharp
         public const string PrivateKey = "Private key for your Metered account";
 
         public const string SamplesPath = "../../../../GroupDocs.Redaction.Examples.CSharp/Resources/SampleFiles";
-        public const string ImagesPath = "../../../../GroupDocs.Redaction.Examples.CSharp/Resources/SampleFiles/Images";
-        public const string CertificatesPath = "../../../../GroupDocs.Redaction.Examples.CSharp/Resources/SampleFiles/Certificates";
         public const string OutputPath = "../../Output/";        
 
         private static string GetSampleFilePath(string filePath) 
@@ -30,24 +28,23 @@ namespace GroupDocs.Redaction.Examples.CSharp
 	    }
         
         // WordProcessing documents
-        public static string SAMPLE_DOCX = GetSampleFilePath("Wordprocessing/sample.docx");
+        public static string SAMPLE_DOCX = GetSampleFilePath("Wordprocessing/04_pages_docx.docx");
         public static string CONVERSION_CONTROL_DOCX = GetSampleFilePath("Wordprocessing/demo.docx");
         public static string PROTECTED_SAMPLE_DOCX = GetSampleFilePath("Wordprocessing/protected_sample.docx");
         public static string OVERWRITTEN_SAMPLE_DOCX = GetSampleFilePath("Wordprocessing/overwritten_sample.docx");
         public static string MULTIPAGE_SAMPLE_DOCX = GetSampleFilePath("Wordprocessing/multipage_sample.docx");
 
         // PDF
+        public static string SAMPLE_PDF = GetSampleFilePath("Pdf/04_pages_pdf.pdf");
         public static string SAMPLE_PDF_4OCR = GetSampleFilePath("Pdf/OCR sample.pdf");
-        public static string MULTIPAGE_PDF = GetSampleFilePath("Pdf/Multipage.pdf");
         public static string LOREMIPSUM_PDF = GetSampleFilePath("Pdf/LoremIpsum.pdf");
         public static string ARABIC_PDF = GetSampleFilePath("Pdf/Arabic.pdf");
 
         // Presentations
-        public static string SAMPLE_PPTX = GetSampleFilePath("Presentations/sample.pptx");
+        public static string SAMPLE_PPTX = GetSampleFilePath("Presentations/04_pages_pptx.pptx");
 
         // Spreadsheets
-        public static string ANNOTATED_XLSX = GetSampleFilePath("Spreadsheets/sample1.xlsx");
-        public static string SAMPLE_XLSX = GetSampleFilePath("Spreadsheets/sample.xlsx");
+        public static string SAMPLE_XLSX = GetSampleFilePath("Spreadsheets/04_pages_xlsx.xlsx");
 
         // Images
         public static string SAMPLE_JPG = GetSampleFilePath("Images/sample.jpg");

@@ -27,7 +27,6 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.UsingOCR
             var settings = new RedactorSettings(new ComputerVisionOcrConnector());
             using (var redactor = new Redactor(sourceFile, new LoadOptions(), settings))
             {
-                // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
                 var marker = new ReplacementOptions(Color.Black);
                 var result = redactor.Apply(new Redaction[] {
                     new RegexRedaction(@"(?<=Dear\s+)([^,]+)", marker), // cardholder name

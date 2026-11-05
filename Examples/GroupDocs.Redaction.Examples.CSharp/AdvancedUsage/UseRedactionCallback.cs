@@ -22,7 +22,7 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage
             using (Redactor redactor = new Redactor(sourceFile, new LoadOptions(), new RedactorSettings(new RedactionDump())))
             {
                 // Assign an instance before using Redactor
-                redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions("[personal]")));
+                redactor.Apply(new ExactPhraseRedaction("sensitive data", new ReplacementOptions("[personal]")));
                 var outputFile = redactor.Save();
                 Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");
             }

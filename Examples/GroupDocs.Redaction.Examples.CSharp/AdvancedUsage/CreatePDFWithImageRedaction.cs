@@ -31,9 +31,6 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage
             // Re-open the rasterized PDF document to redact its pages as images
             using (var redactor = new Redactor(stream))
             {
-                // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
-                //RedactorChangeLog result = redactor.Apply(new Redactions.ImageAreaRedaction(new System.Drawing.Point(40, 160),
-                //    new RegionReplacementOptions(System.Drawing.Color.Aqua, new System.Drawing.Size(350, 75))));
                 RedactorChangeLog result = redactor.Apply(new Redactions.ImageAreaRedaction(new Point(40, 160),
                     new RegionReplacementOptions(Color.FromArgb(255, 0, 255, 255), new Size(350, 75))));
                 if (result.Status != RedactionStatus.Failed)

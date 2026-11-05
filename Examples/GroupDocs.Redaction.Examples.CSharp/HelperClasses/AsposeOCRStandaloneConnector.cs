@@ -56,8 +56,6 @@ namespace GroupDocs.Redaction.Examples.CSharp.HelperClasses
             List<TextLine> lines = new List<TextLine>();
             for (int i = 0; i < result.RecognitionAreasText.Count; i++)
             {
-                // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
-                //var fragments = RegularTextLine.SplitToFragments(result.RecognitionAreasText[i].Trim('\r', '\n'), result.RecognitionAreasRectangles[i]);
                 var areaRect = result.RecognitionAreasRectangles[i];
                 var boundingRect = new Rectangle(areaRect.X, areaRect.Y, areaRect.Width, areaRect.Height);
                 var fragments = RegularTextLine.SplitToFragments(result.RecognitionAreasText[i].Trim('\r', '\n'), boundingRect);

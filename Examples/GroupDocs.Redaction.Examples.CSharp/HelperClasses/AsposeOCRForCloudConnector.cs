@@ -80,8 +80,6 @@ namespace GroupDocs.Redaction.Examples.CSharp.HelperClasses
         {
             string lineText = line["values"].ToString();
             Rectangle lineRectangle = GetLineRectangle(line);
-            // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
-            //if (!string.IsNullOrEmpty(lineText) && !lineRectangle.IsEmpty)
             if (!string.IsNullOrEmpty(lineText) && !lineRectangle.Equals(Rectangle.Empty))
             {
                 return new TextLine(RegularTextLine.SplitToFragments(lineText, lineRectangle));
@@ -95,9 +93,6 @@ namespace GroupDocs.Redaction.Examples.CSharp.HelperClasses
         private Rectangle GetLineRectangle(JToken line)
         {
             var rect = line["rect"];
-            // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
-            //return new System.Drawing.Rectangle(rect[0].Value<int>(), rect[1].Value<int>(), rect[2].Value<int>() - rect[0].Value<int>(),
-            //    rect[3].Value<int>() - rect[1].Value<int>());
             return new Rectangle(rect[0].Value<int>(), rect[1].Value<int>(), rect[2].Value<int>() - rect[0].Value<int>(),
                 rect[3].Value<int>() - rect[1].Value<int>());
         }

@@ -20,7 +20,7 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.SavingDocuments
             using (Redactor redactor = new Redactor(sourceFile))
             {
                 // Here we can use document instance to perform redactions
-                redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions("[personal]")));
+                redactor.Apply(new ExactPhraseRedaction("sensitive data", new ReplacementOptions("[personal]")));
                 // Saving in original format with date as a suffix
                 var outputFile = redactor.Save(new SaveOptions() { AddSuffix = true, RasterizeToPDF = false, RedactedFileSuffix = DateTime.Now.ToShortDateString() });
                 Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");

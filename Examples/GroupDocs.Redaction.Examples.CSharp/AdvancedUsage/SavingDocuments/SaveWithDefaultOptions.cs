@@ -19,7 +19,7 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.SavingDocuments
             using (Redactor redactor = new Redactor(sourceFile))
             {
                 // Here we can use document instance to perform redactions
-                redactor.Apply(new ExactPhraseRedaction("John Doe", new ReplacementOptions("[personal]")));
+                redactor.Apply(new ExactPhraseRedaction("sensitive data", new ReplacementOptions("[personal]")));
                 // Save the document with default options (convert pages into images, save as PDF)
                 var outputFile = redactor.Save();
                 Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");

@@ -20,13 +20,8 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.ImageRedactions
             //ExStart:ImageAreaRedaction_20.7
             using (Redactor redactor = new Redactor(sourceFile))
             {
-                // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
-                //System.Drawing.Point samplePoint = new System.Drawing.Point(516, 311);
-                //System.Drawing.Size sampleSize = new System.Drawing.Size(170, 35);
                 Point samplePoint = new Point(516, 311);
                 Size sampleSize = new Size(170, 35);
-                //RedactorChangeLog result = redactor.Apply(new ImageAreaRedaction(samplePoint,
-                //              new RegionReplacementOptions(System.Drawing.Color.Blue, sampleSize)));
                 RedactorChangeLog result = redactor.Apply(new ImageAreaRedaction(samplePoint,
                               new RegionReplacementOptions(Color.Blue, sampleSize)));
                 if (result.Status != RedactionStatus.Failed)

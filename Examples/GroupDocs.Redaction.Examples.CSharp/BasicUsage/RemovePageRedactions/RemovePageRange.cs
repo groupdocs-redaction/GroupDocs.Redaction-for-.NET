@@ -15,7 +15,7 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.RemovePageRedactions
             Console.WriteLine("[Example Basic Usage] # RemovePageRange.cs : Remove document pages");
 
             // Prepare output directory and source file.
-            string sourceFile = Utils.PrepareOutputDirectory(Constants.MULTIPAGE_PDF);
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.SAMPLE_PDF);
 
             using (Redactor redactor = new Redactor(sourceFile))
             {

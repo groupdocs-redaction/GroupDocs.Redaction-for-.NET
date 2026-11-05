@@ -18,7 +18,7 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.TextRedactions
 
             using (Redactor redactor  = new Redactor(sourceFile))
             {
-                redactor.Apply(new ExactPhraseRedaction("John Doe", true /*isCaseSensitive*/, new ReplacementOptions("[personal]")));
+                redactor.Apply(new ExactPhraseRedaction("sensitive data", true /*isCaseSensitive*/, new ReplacementOptions("[personal]")));
                 var outputFile = redactor.Save();
                 Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");
             }

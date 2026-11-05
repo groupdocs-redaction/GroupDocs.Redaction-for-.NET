@@ -108,13 +108,9 @@ namespace GroupDocs.Redaction.Examples.CSharp.HelperClasses
                 var items = boundingBox.Split(',');
                 if (items.Length == 4)
                 {
-                    // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
-                    //return new System.Drawing.Rectangle(int.Parse(items[0]), int.Parse(items[1]), int.Parse(items[2]), int.Parse(items[3]));
                     return new Rectangle(int.Parse(items[0]), int.Parse(items[1]), int.Parse(items[2]), int.Parse(items[3]));
                 }
             }
-            // Use GroupDocs.Redaction.Options.Drawing types instead of System.Drawing, which is scheduled for removal in future versions.
-            //return System.Drawing.Rectangle.Empty;
             return Rectangle.Empty;
         }
     }

@@ -74,7 +74,7 @@ Directory | Description
 ```csharp
 using (Redactor redactor = new Redactor(@"sample.docx"))
 {
-  redactor.Apply(new ExactPhraseRedaction("John Doe", true /*isCaseSensitive*/, new ReplacementOptions("[personal]")));
+  redactor.Apply(new ExactPhraseRedaction("sensitive data", true /*isCaseSensitive*/, new ReplacementOptions("[personal]")));
   redactor.Save();
 }
 ```
