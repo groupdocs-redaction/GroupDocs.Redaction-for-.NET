@@ -7,7 +7,7 @@ namespace GroupDocs.Redaction.Examples.CSharp
         /// <summary>
         /// License file path
         /// </summary>
-        public const string LicensePath = @"C:\Licenses\GroupDocs\Total\Subscription\Valid\2026\Conholdate.Total.Product.Family.lic";
+        public const string LicensePath = @"your license file path";
 
         /// <summary>
         /// Public key for dynabic account
@@ -31,8 +31,6 @@ namespace GroupDocs.Redaction.Examples.CSharp
         public static string SAMPLE_DOCX = GetSampleFilePath("Wordprocessing/04_pages_docx.docx");
         public static string CONVERSION_CONTROL_DOCX = GetSampleFilePath("Wordprocessing/demo.docx");
         public static string PROTECTED_SAMPLE_DOCX = GetSampleFilePath("Wordprocessing/protected_sample.docx");
-        public static string OVERWRITTEN_SAMPLE_DOCX = GetSampleFilePath("Wordprocessing/overwritten_sample.docx");
-        public static string MULTIPAGE_SAMPLE_DOCX = GetSampleFilePath("Wordprocessing/multipage_sample.docx");
 
         // PDF
         public static string SAMPLE_PDF = GetSampleFilePath("Pdf/04_pages_pdf.pdf");
@@ -47,9 +45,8 @@ namespace GroupDocs.Redaction.Examples.CSharp
         public static string SAMPLE_XLSX = GetSampleFilePath("Spreadsheets/04_pages_xlsx.xlsx");
 
         // Images
-        public static string SAMPLE_JPG = GetSampleFilePath("Images/sample.jpg");
-        public static string SAMPLE_EXIF_JPG = GetSampleFilePath("Images/exif.jpg");
-        public static string ANIMATED_GIF = GetSampleFilePath("Images/sample.gif");
+        public static string SAMPLE_JPG = GetSampleFilePath("Images/01_pages_jpg.jpg");
+        public static string SAMPLE_GIF = GetSampleFilePath("Images/04_pages_gif.gif");
 
         // Text files
         public static string SAMPLE_DUMP = GetSampleFilePath("Wordprocessing/sample.dump");

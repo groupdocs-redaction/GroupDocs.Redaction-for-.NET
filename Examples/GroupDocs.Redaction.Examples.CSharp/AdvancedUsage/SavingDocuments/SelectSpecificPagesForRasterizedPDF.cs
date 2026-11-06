@@ -16,7 +16,7 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.SavingDocuments
             Console.WriteLine("[Example Advanced Usage] # SelectSpecificPagesForRasterizedPDF.cs : Save redacted document to PDF with specific page rasterization");
 
             // Prepare output directory and source file.
-            string sourceFile = Utils.PrepareOutputDirectory(Constants.MULTIPAGE_SAMPLE_DOCX);
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.SAMPLE_DOCX);
 
             using (Redactor redactor = new Redactor(sourceFile))
             {
@@ -26,7 +26,7 @@ namespace GroupDocs.Redaction.Examples.CSharp.AdvancedUsage.SavingDocuments
 
                     var options = new SaveOptions();
                     options.Rasterization.Enabled = true;                           // the same as options.RasterizeToPDF = true;
-                    options.Rasterization.PageIndex = 5;                            // start from 6th page (index is 0-based)
+                    options.Rasterization.PageIndex = 2;                            // start from 3th page (index is 0-based)
                     options.Rasterization.PageCount = 1;                            // save only one page
                     options.Rasterization.Compliance = PdfComplianceLevel.PdfA1a;   // by default PdfComplianceLevel.Auto or PDF/A-1b
                     options.AddSuffix = true;

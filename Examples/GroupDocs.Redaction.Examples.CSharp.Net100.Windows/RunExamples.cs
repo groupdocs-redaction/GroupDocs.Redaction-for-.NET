@@ -127,6 +127,18 @@ namespace GroupDocs.Redaction.Examples.CSharp.Net100
             // Get document info from stream.
             BasicUsage.GetFileInfoForAFileFromStream.Run();
 
+            //===============================
+            // Trial mode allows up to 25 documents to be opened in a single process.
+            // The examples below are commented out to avoid exceeding this limit and triggering an exception.
+            // To run these examples, comment out the preceding examples and remove the return statement.
+            // Alternatively, obtain a valid license to remove this limitation and configure it using Constants.LicensePath.
+            // The QuickStart.SetLicenseFromFile example applies the license at the beginning of the process.
+            // Learn more about licensing at https://purchase.groupdocs.com/faqs/licensing/
+            // Purchase a license or obtain a temporary license at https://purchase.groupdocs.com/pricing/
+            //===============================
+
+            return;
+
             // Get document page preview.
             BasicUsage.GetDocumentPagePreview.Run();
 
