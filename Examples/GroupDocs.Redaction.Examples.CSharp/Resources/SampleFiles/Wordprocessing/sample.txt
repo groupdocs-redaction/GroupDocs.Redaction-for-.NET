@@ -1,5 +1,0 @@
-Exact phrase redactions
-Exact Phrase redaction applies textual redaction, replacing personal exact phrase "John Doe" with "[personal]" 
-
-
-

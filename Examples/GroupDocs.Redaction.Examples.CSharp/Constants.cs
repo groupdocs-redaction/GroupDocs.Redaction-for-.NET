@@ -29,7 +29,6 @@ namespace GroupDocs.Redaction.Examples.CSharp
         
         // WordProcessing documents
         public static string SAMPLE_DOCX = GetSampleFilePath("Wordprocessing/04_pages_docx.docx");
-        public static string CONVERSION_CONTROL_DOCX = GetSampleFilePath("Wordprocessing/demo.docx");
         public static string PROTECTED_SAMPLE_DOCX = GetSampleFilePath("Wordprocessing/protected_sample.docx");
 
         // PDF

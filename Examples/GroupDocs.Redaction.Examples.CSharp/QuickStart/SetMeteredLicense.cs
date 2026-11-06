@@ -13,7 +13,7 @@ namespace GroupDocs.Redaction.Examples.CSharp.QuickStart
         public static void Run()
         {
             // Prepare output directory and source file.
-            string sourceFile = Utils.PrepareOutputDirectory(Constants.CONVERSION_CONTROL_DOCX);
+            string sourceFile = Utils.PrepareOutputDirectory(Constants.SAMPLE_DOCX);
 
             Console.WriteLine("[Quick Start] # SetMeteredLicense.cs : Set metered license");
             // initialize Metered API
