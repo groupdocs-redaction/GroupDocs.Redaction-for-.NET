@@ -27,6 +27,11 @@ namespace GroupDocs.Redaction.Live.Demos.UI.Config
 		private static string _fileViewLink = ConfigurationManager.AppSettings["FileViewLink"];
         private static int _threadAbortSeconds = int.Parse(ConfigurationManager.AppSettings["ThreadAbortSeconds"].ToString());
 
+        static Configuration()
+        {
+            Directory.CreateDirectory(_assetPath);
+        }
+
         public static string ProductsGroupDocsAppsURL
 		{
 			get { return _productsGroupDocsAppsURL; }

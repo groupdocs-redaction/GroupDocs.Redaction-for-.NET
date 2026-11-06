@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using GroupDocs.Redaction.Live.Demos.UI.Models;
 using System;
 using System.IO;
+using GroupDocs.Redaction.Options;
 using GroupDocs.Redaction.Redactions;
 
 namespace GroupDocs.Redaction.Live.Demos.UI.Controllers
@@ -21,26 +22,26 @@ namespace GroupDocs.Redaction.Live.Demos.UI.Controllers
                 string fileExt = Path.GetExtension(fileName).Substring(1).ToLower();
 
                 return await ProcessTask(fileName, folderName, "." + fileExt, false, "", delegate (string inFilePath, string outPath, string zipOutFolder)
-				{                    
-                    using (Document doc = Redactor.Load(inFilePath))
-                    {
+				{
+                    string outputDir = AppSettings.DemosOutputDirectory;
+                    Directory.CreateDirectory(outputDir);
+                    string copiedPath = Path.Combine(outputDir, Path.GetFileName(inFilePath));
+                    File.Copy(inFilePath, copiedPath, true);
 
+                    using (Redactor redactor = new Redactor(copiedPath))
+                    {
                         if (metadataActionFlag)
                         {
-                            doc.RedactWith(new MetadataSearchRedaction(searchText, replaceText));
+                            redactor.Apply(new MetadataSearchRedaction(searchText, replaceText));
                         }
                         else
                         {
-                            doc.RedactWith(new ExactPhraseRedaction(searchText, new ReplacementOptions(replaceText)));
-
+                            redactor.Apply(new ExactPhraseRedaction(searchText, new ReplacementOptions(replaceText)));
                         }
 
-                        using (Stream outFile = new FileStream(outPath, FileMode.Create, FileAccess.ReadWrite))
-                        {
-                            doc.Save(outFile, new SaveOptions() { AddSuffix = true, RasterizeToPDF = false });                         
-                        }
+                        string redactedPath = redactor.Save(new SaveOptions() { AddSuffix = true, RasterizeToPDF = false });
+                        File.Copy(redactedPath, outPath, true);
                     }
-
                 });
 			}
 			catch (Exception exc)

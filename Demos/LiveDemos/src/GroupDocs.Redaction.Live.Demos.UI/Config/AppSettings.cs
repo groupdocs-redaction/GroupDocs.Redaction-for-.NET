@@ -17,6 +17,16 @@ namespace GroupDocs.Redaction.Live.Demos.UI
 		private static string _workingDirectory = path + ConfigurationManager.AppSettings["WorkingDirectory"].ToString();
 		private static string _storageDirectory = path + ConfigurationManager.AppSettings["StorageDirectory"].ToString();
 		private static string _filesBaseDirectory = path + ConfigurationManager.AppSettings["FilesBaseDirectory"].ToString();
+		private static string _demosOutputDirectory = Path.GetFullPath(Path.Combine(path, "..", "..", "..", "..", "Output"));
+
+		static AppSettings()
+		{
+			Directory.CreateDirectory(_outputDirectory);
+			Directory.CreateDirectory(_workingDirectory);
+			Directory.CreateDirectory(_storageDirectory);
+			Directory.CreateDirectory(_filesBaseDirectory);
+			Directory.CreateDirectory(_demosOutputDirectory);
+		}
 
 		public static string OutputDirectory
 		{
@@ -36,6 +46,11 @@ namespace GroupDocs.Redaction.Live.Demos.UI
 		public static string FilesBaseDirectory
 		{
 			get { return _filesBaseDirectory.ToLower(); }
+		}
+
+		public static string DemosOutputDirectory
+		{
+			get { return _demosOutputDirectory; }
 		}
 	}
 }
