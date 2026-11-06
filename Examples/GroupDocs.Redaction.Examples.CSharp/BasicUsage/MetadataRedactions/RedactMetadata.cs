@@ -19,7 +19,7 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.MetadataRedactions
 
             using (Redactor redactor  = new Redactor(sourceFile))
             {
-                redactor.Apply(new MetadataSearchRedaction("Company Ltd.", "--company--"));
+                redactor.Apply(new MetadataSearchRedaction("GroupDocs", "--company--"));
                 // Save the document to "*_Redacted.*" file in original format
                 var outputFile = redactor.Save(new SaveOptions() { AddSuffix = true, RasterizeToPDF = false });
                 Console.WriteLine($"\nSource document was redacted successfully.\nFile saved to {outputFile}.");

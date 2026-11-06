@@ -22,11 +22,11 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.SpreadsheetRedactions
             {
                 var filter = new CellFilter()
                 {
-                    ColumnIndex = 1, // zero-based 2nd column
-                    WorkSheetName = "Customers"
+                    ColumnIndex = 0, // zero-based 1st column
+                    WorkSheetName = "Other"
                 };
-                var expression = new Regex("^\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$");
-                RedactorChangeLog result = redactor.Apply(new CellColumnRedaction(filter, expression, new ReplacementOptions("[customer email]")));
+                var expression = new Regex("R[a-zA-Z ]{0,15}n");
+                RedactorChangeLog result = redactor.Apply(new CellColumnRedaction(filter, expression, new ReplacementOptions("[classified]")));
                 if (result.Status != RedactionStatus.Failed)
                 {
                     var outputFile = redactor.Save(new SaveOptions() { AddSuffix = true, RasterizeToPDF = false });

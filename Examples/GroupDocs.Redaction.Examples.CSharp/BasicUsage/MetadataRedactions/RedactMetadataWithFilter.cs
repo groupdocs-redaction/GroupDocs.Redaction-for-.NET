@@ -19,9 +19,9 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.MetadataRedactions
 
             using (Redactor redactor  = new Redactor(sourceFile))
             {
-                MetadataSearchRedaction redaction = new MetadataSearchRedaction("Company Ltd.", "--company--")
+                MetadataSearchRedaction redaction = new MetadataSearchRedaction("GroupDocs", "--company--")
                 {
-                    Filter = MetadataFilters.Company
+                    Filter = MetadataFilters.Author
                 };
                 redactor.Apply(redaction);
                 // Save the document to "*_Redacted.*" file in original format

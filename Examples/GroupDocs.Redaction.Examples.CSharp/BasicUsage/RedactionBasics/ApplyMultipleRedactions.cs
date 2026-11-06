@@ -23,7 +23,7 @@ namespace GroupDocs.Redaction.Examples.CSharp.BasicUsage.RedactionBasics
                 {
                       new ExactPhraseRedaction("sensitive data", new ReplacementOptions("[Client]")),
                       new RegexRedaction("Redaction", new ReplacementOptions("[Product]")),
-                      new RegexRedaction("\\d{2}\\s*\\d{2}[^\\d]*\\d{6}", new ReplacementOptions(Color.Blue)),
+                      new RegexRedaction(@"\b\w{4}\s*\w{10}", new ReplacementOptions(Color.Blue)),
                       new DeleteAnnotationRedaction(),
                       new EraseMetadataRedaction(MetadataFilters.All)
                 };
